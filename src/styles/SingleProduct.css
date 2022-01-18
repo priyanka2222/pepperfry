@@ -1,0 +1,14 @@
+.singleproductdiv {
+  display: flex;
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-top: 10px;
+}
+.detailsdiv {
+  margin-right: 40px;
+  margin-left: 10px;
+}
+
+#spandiscount {
+  text-decoration: line-through;
+}
