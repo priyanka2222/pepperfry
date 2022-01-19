@@ -1,6 +1,7 @@
 import { HomeStatic } from "./HomeStatic"
 import { Products } from "./Products"
 import { SingleProduct } from "./SingleProduct"
+import { Cart } from "./Cart"
 
 
 export const Home = () => {
@@ -10,6 +11,7 @@ export const Home = () => {
             <HomeStatic /> */}
             <Products />
             <SingleProduct />
+            <Cart />
         </div>
     )
 }
