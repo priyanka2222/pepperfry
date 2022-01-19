@@ -5,8 +5,8 @@ import { Products } from "./Products"
 export const Home = () => {
     return (
         <div>
-            <h2>Home page</h2>
-            <HomeStatic />
+            {/* <h2>Home page</h2>
+            <HomeStatic /> */}
             <Products />
         </div>
     )
