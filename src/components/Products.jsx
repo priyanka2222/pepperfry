@@ -4,7 +4,11 @@ import {FormControlLabel,Radio,RadioGroup,FormControl,FormLabel, FormGroup, Chec
 import { Box } from '@mui/system'
 
 
+
 export const Products = () => {
+
+    
+    
     return (
     <div>
 
@@ -64,6 +68,8 @@ export const Products = () => {
       <div className='discount' >30%off<span id='spanbutton'><Button style={{backgroundColor:"orange"}} variant="contained">Add To Cart</Button></span></div>
 
   </ListItem>
+
+  
   <ListItem  className='listitem' style={{display:"grid"}}>
       <img style={{width:"280px", height:"300px"} } src="https://ii2.pepperfry.com/media/catalog/product/b/o/494x544/box-sofa-bean-bag-with-beans-in-tan-colour-by-couchette-box-sofa-bean-bag-with-beans-in-tan-colour-b-ghoyd3.jpg" alt="sofa1" />
       <h4 style={{marginBottom:"6px"}}>Box Sofa Bean Bag with beans in Tan Colour</h4>
@@ -103,6 +109,7 @@ export const Products = () => {
       <div  className='discount' >30%off<span id='spanbutton'><Button style={{backgroundColor:"orange"}} variant="contained">Add To Cart</Button></span></div>
 
   </ListItem>
+  
   
 </Box>
 
