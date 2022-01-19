@@ -1,4 +1,4 @@
-import { BottomNavigationAction, Button, IconButton, Tooltip } from "@mui/material";
+import { BottomNavigationAction, Button, FormControl, IconButton, InputLabel, MenuItem, Select, Tooltip } from "@mui/material";
 import "../styles/Cart.css";
 
 
@@ -41,6 +41,21 @@ export const Cart=()=>{
 
 
                          <div id="increaseQty">
+                         <FormControl id="qtyform">
+                            <InputLabel id="demo-simple-select-label">QTY</InputLabel>
+                            <Select
+   
+                            >
+                            <MenuItem value={1}>1</MenuItem>
+                             <MenuItem value={2}>2</MenuItem>
+                             <MenuItem value={3}>3</MenuItem>
+                             </Select>
+                        </FormControl>
+
+
+
+
+
                          <Tooltip title="Delete">
                          <IconButton aria-label="delete" size="large">
                           <DeleteIcon fontSize="inherit" />
