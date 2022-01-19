@@ -1,5 +1,9 @@
-import { Button } from "@mui/material";
+import { BottomNavigationAction, Button, IconButton, Tooltip } from "@mui/material";
 import "../styles/Cart.css";
+
+
+import DeleteIcon from '@mui/icons-material/Delete';
+import FavoriteIcon from '@mui/icons-material/Favorite';
 
 
 
@@ -12,10 +16,12 @@ export const Cart=()=>{
                 <div id="cart">
                     <div id="pincode" >
                         <div>
-                        Enter Your Pincode For Delivery & Assembly Information
+                        Enter Your Pincode For Delivery  Assembly Information
                         </div>
                         <div>
+                        
                             <input type="pincode" /><span><button id="spanbutton2">Go</button></span>
+                            
                         </div>
 
                     </div>
@@ -35,7 +41,13 @@ export const Cart=()=>{
 
 
                          <div id="increaseQty">
+                         <Tooltip title="Delete">
+                         <IconButton aria-label="delete" size="large">
+                          <DeleteIcon fontSize="inherit" />
+                          </IconButton>
+                          </Tooltip>
                          
+                          <BottomNavigationAction label="Favorites" icon={<FavoriteIcon />} />
                         
 
                          </div>
@@ -46,7 +58,6 @@ export const Cart=()=>{
 
                     
 
-
                 </div>
                 <div id="summary">
                     <div className="border" style={{padding:"10px"}} >
@@ -56,8 +67,9 @@ export const Cart=()=>{
 
                     <div className="border" style={{padding:"6px"}}>
                         <div style={{marginLeft:"15px"}}><span><img style={{marginTop:"2px"}} src="https://ii1.pepperfry.com/images/svg/cpn-auto-fill-icon.svg" alt="icon" /></span>
-                           &nbsp; &nbsp; &nbsp;  Apply Coupun<span id="couponicon">></span></div>
+                           &nbsp; &nbsp; &nbsp;  Apply Coupun<span id="couponicon"></span></div>
                     </div>
+
 
 
                     <div className="border" style={{padding:"10px"}}>
