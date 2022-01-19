@@ -389,4 +389,3 @@ export const HomeStatic = () => {
 
     );
 }
->>>>>>> 46f56db32699f3e16d107415717ce1d26bd05a68
