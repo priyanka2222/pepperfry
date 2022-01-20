@@ -50,7 +50,7 @@ export const Cart=()=>{
                              <MenuItem value={2}>2</MenuItem>
                              <MenuItem value={3}>3</MenuItem>
                              </Select>
-                        </FormControl>
+                          </FormControl>
 
 
 

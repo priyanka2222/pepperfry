@@ -1,13 +1,10 @@
 #cartpage {
   margin: 10px 50px;
-  border: 1px solid #e7e7e7;
 }
 #cart {
-  border: 1px solid #e7e7e7;
   width: 800px;
 }
 #summary {
-  border: 1px solid #e7e7e7;
   width: 380px;
   margin-left: 20px;
 }
