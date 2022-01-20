@@ -1,4 +1,4 @@
-export const CartAddress = ()=>{
+export const Checkout = ()=>{
     return (
         <div></div>
     )

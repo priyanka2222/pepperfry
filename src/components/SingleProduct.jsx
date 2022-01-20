@@ -1,19 +1,33 @@
 import { Button, FormControl, InputLabel, MenuItem, Select, TextField } from "@mui/material";
-
+import {useState, useEffect } from 'react'
+import { useParams } from "react-router-dom";
+import { apiurl} from '../utils/request'
 import "../styles/SingleProduct.css";
 export const SingleProduct =()=>{
+    const [product, setProductdata] = useState()
+    const {id} = useParams()
+    useEffect(() => {
+      getOne()
+    }, []);
+
+    async function getOne(){
+        const {data} = await apiurl.get(`/product/${id}`)
+        setProductdata(data)
+    }
+    console.log(product)
     return (
+     
         <div>
             <hr />
             <div className="singleproductdiv">
-                <img  style={{margin:"10px 10px 10px 40px ", width:"600px", height:"600px"}}className="image" src="https://ii1.pepperfry.com/media/catalog/product/b/o/568x625/box-sofa-bean-bag-with-beans-in-tan-colour-by-couchette-box-sofa-bean-bag-with-beans-in-tan-colour-b-gn3fou.jpg" alt="sofa" />
+                <img  style={{margin:"10px 10px 10px 40px ", width:"600px", height:"600px"}}className="image" src={product.images[0]} alt="sofa" />
                 <div className="detailsdiv">
                     
                         <div>Home <span> {`>`} </span> Furniture {`>`} Products </div>
 
 
-                        <h3 style={{marginBottom:"2px"}}>Box Sofa Bean Bag with beans in Tan Colour</h3>
-                        <div style={{color:"#ff7035",marginBottom:"20px"}}>By Couchette</div>
+                        <h3 style={{marginBottom:"2px"}}>{product.title}</h3>
+                        <div style={{color:"#ff7035",marginBottom:"20px"}}>By {}</div>
                         <div style={{fontWeight:"bold"}}>4 Years' Warranty</div>
                         <h2 style={{fontWeight:"bolder"}}>₹ 25,519 <span style={{color:"green", fontWeight:"normal",fontSize:"16px"}}>(36% off)</span></h2>
                         <div style={{marginBottom:"5px"}}>Save ₹ 14,480 <span id="spandiscount"> MRP ₹ 39,999</span><span>(Inc of all taxes)</span></div>
