@@ -17,7 +17,6 @@ export const SingleProduct =()=>{
     console.log(productdata)
     return (
         <div>
-            <hr />
             <div className="singleproductdiv">
                 <img  style={{margin:"10px 10px 10px 40px ", width:"600px", height:"600px"}}className="image" src="https://ii1.pepperfry.com/media/catalog/product/b/o/568x625/box-sofa-bean-bag-with-beans-in-tan-colour-by-couchette-box-sofa-bean-bag-with-beans-in-tan-colour-b-gn3fou.jpg" alt="sofa" />
                 <div className="detailsdiv">
@@ -72,9 +71,6 @@ export const SingleProduct =()=>{
                                 <Button style={{width:"200px",margin:"0 20px",color:"black"}} variant="outlined">ADD TO CART</Button>
                                 <Button style={{width:"200px",margin:"0 20px",backgroundColor:"#ff7035",color:"white"}} variant="contained">BUY NOW</Button>
                         </div>
-
-
-
 
                         <div style={{display:"flex"}}>
                             <div style={{fontWeight:"bold"}}>MORE OFFERS</div>
