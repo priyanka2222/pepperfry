@@ -5,6 +5,7 @@ import { Header } from "./Header"
 import { SingleProduct } from "./SingleProduct"
 
 import { Payment } from "./Payment"
+import { Cart } from "./Cart"
 
 
 
@@ -17,7 +18,8 @@ export const Home = () => {
             <HomeStatic />
              <Products />
             <SingleProduct /> */}
-            <Login />
+
+            <Cart />
             <Payment />
         </div>
     )
