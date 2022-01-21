@@ -14,6 +14,7 @@ export const Home = () => {
         <div>
 
             <Header />
+            <br />
             <HomeStatic />
             <Footer />
             {/* <h2>Home page</h2>

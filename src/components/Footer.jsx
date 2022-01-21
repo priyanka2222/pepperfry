@@ -13,7 +13,7 @@ import '../styles/Footer.css'
                         <div className="footer-col-wrapper"> 
                             <h4 id="footer-logo" className="footer-col-heading">Useful Links</h4>                         
                             <ul className="list">
-                                <li onclick="aboutUs()"><Link to="" ></Link>About Us</li> 
+                                <li ><Link to="" ></Link>About Us</li> 
                                 
                                 <li><Link to="">Our Blog</Link></li>
                                 <li><Link to="">Careers</Link></li>

@@ -25,11 +25,11 @@ return (
                     <img alt="imgtag" src="	https://ii1.pepperfry.com/images/svg/header-wishlist-icon-2021.svg"/>
                     
                 </div>
-                <div class="items">
+                <div className="items">
                     <img alt="imgtag" src="https://ii1.pepperfry.com/images/svg/header-cart-icon-2021.svg"/>
                     
                 </div>
-                <div onclick="profile()" class="items">
+                <div  className="items">
                     <img alt="imgtag" src="	https://ii1.pepperfry.com/images/svg/header-profile-icon-2021.svg
                     "/>
                     
@@ -39,15 +39,15 @@ return (
         </div>
 
         <nav>
-            <div class="wrapper">
-            <ul class="nav-links">
+            <div className="wrapper">
+            <ul className="nav-links">
                 <li id="first">
                     <Link to="/products">Furniture</Link>
-                    <div class="mega-box" >
-                    <div class="content">
-                        <div class="rowone">
+                    <div className="mega-box" >
+                    <div className="content">
+                        <div className="rowone">
                             <header>Sofas</header>  
-                            <ul class="mega-links a">
+                            <ul className="mega-links a">
                                 <li><a href="/">Sofas</a></li>
                                 <li><a href="/">3 Seater sofas</a></li>
                                 <li><a href="/">2 Seater Sofas</a></li>
@@ -60,9 +60,9 @@ return (
                                 <li><a href="/">Futons </a></li>
                             </ul>
                         </div>
-                        <div class="rowone">
+                        <div className="rowone">
                         <header>Seating</header>  
-                        <ul class="mega-links c" >
+                        <ul className="mega-links c" >
                             <li><a href="/">Settees</a></li>
                             <li><a href="/">Benches</a></li>
                             <li><a href="/">Ottomans</a></li>
@@ -75,9 +75,9 @@ return (
                         </ul>
                         </div> 
                         
-                        <div class="rowone">
+                        <div className="rowone">
                         <header>Chairs</header>  
-                        <ul class="mega-links a" >
+                        <ul className="mega-links a" >
                             <li><a href="/">Arm Chairs</a></li>
                             <li><a href="/">Rocking Chairs</a></li>
                             <li><a href="/">Cantilever Chairs</a></li>
@@ -90,12 +90,12 @@ return (
                         </ul>
                     </div>
 
-                    <div class="rowone">
-                        <img alt="imgtag" class="d" src="https://ii1.pepperfry.com/media/wysiwyg/banners/2021_hover_Furniture.png"/>
+                    <div className="rowone">
+                        <img alt="imgtag" className="d" src="https://ii1.pepperfry.com/media/wysiwyg/banners/2021_hover_Furniture.png"/>
                     </div>
 {/* 
-                    <div class="one">
-                        <h1 class="brand">Top Brands</h1>
+                    <div className="one">
+                        <h1 className="brand">Top Brands</h1>
                         <img alt="imgtag" src="https://ii2.pepperfry.com/media/wysiwyg/banners/Spacewood.jpg"/>
                         <img alt="imgtag" src="https://ii2.pepperfry.com/media/wysiwyg/banners/Hometown.jpg "/>
                         <img alt="imgtag" src="https://ii2.pepperfry.com/media/wysiwyg/banners/Mintwood.jpg"/>
@@ -107,11 +107,11 @@ return (
                     </div>
                 </li>
                 <li><Link to="/products">Sofas & Recliners</Link>
-                    <div class="mega-box">
-                        <div class="content">
-                            <div class="rowone">
+                    <div className="mega-box">
+                        <div className="content">
+                            <div className="rowone">
                             <header>By Size</header>  
-                            <ul class="mega-links a">
+                            <ul className="mega-links a">
                                 <li><a href="/">3 Seater Sofas</a></li>
                                 <li><a href="/">2 Seater sofas</a></li>
                                 <li><a href="/">1 Seater Sofas</a></li>
@@ -125,9 +125,9 @@ return (
         
                             </ul>
                             </div>
-                        <div class="rowone">
+                        <div className="rowone">
                         <header>By Type</header>  
-                        <ul class="mega-links b">
+                        <ul className="mega-links b">
                             <li><a href="/">Corner Sofas</a></li>
                             <li><a href="/">Modular Sofas</a></li>
                             <li><a href="/">Sofa cum Beds</a></li>
@@ -139,9 +139,9 @@ return (
                         </ul>
                         </div> 
                         
-                        <div class="rowone">
+                        <div className="rowone">
                         <header>Sofa Chairs</header>  
-                        <ul class="mega-links c">
+                        <ul className="mega-links c">
                             <li><a href="/">Lounge Chairs</a></li>
                             <li><a href="/">Wing Chairs</a></li>
                             <li><a href="/">Barrel Chairs</a></li>
@@ -151,12 +151,12 @@ return (
                         </ul>
                         </div>
         
-                        <div class="rowone">
-                        <img alt="imgtag" class="d"src="https://ii1.pepperfry.com/media/wysiwyg/banners/2021_hover_Sofa_Recliners.png"/>
+                        <div className="rowone">
+                        <img alt="imgtag" className="d"src="https://ii1.pepperfry.com/media/wysiwyg/banners/2021_hover_Sofa_Recliners.png"/>
                         </div>
         
-                        {/* <div class="one">
-                        <h1 class="brand">Top Brands</h1>
+                        {/* <div className="one">
+                        <h1 className="brand">Top Brands</h1>
                         <img alt="imgtag" src="https://ii2.pepperfry.com/media/wysiwyg/banners/Woodsworth.jpg"/>
                         <img alt="imgtag" src="https://ii2.pepperfry.com/media/wysiwyg/banners/Mintwood.jpg"/>
                         <img alt="imgtag" src="https://ii2.pepperfry.com/media/wysiwyg/banners/Casacraft.jpg"/>
@@ -168,11 +168,11 @@ return (
                     </div>
                 </li>
                 <li><a href="/">  Cabinetry</a>
-                    <div class="mega-box">
-                        <div class="content">
-                            <div class="rowone">
+                    <div className="mega-box">
+                        <div className="content">
+                            <div className="rowone">
                             <header>Wardrobes</header>  
-                            <ul class="mega-links a">
+                            <ul className="mega-links a">
                                 <li><a href="/">1 Door Wardrobes</a></li>
                                 <li><a href="/">2 Door Wardrobes</a></li>
                                 <li><a href="/">3 Door Wardrobes</a></li>
@@ -184,9 +184,9 @@ return (
                                 
                             </ul>
                             </div>
-                        <div class="rowone">
+                        <div className="rowone">
                         <header>Storage</header>  
-                        <ul class="mega-links b">
+                        <ul className="mega-links b">
                             <li><a href="/">Book Shelves</a></li>
                             <li><a href="/">Book Cases</a></li>
                             <li><a href="/">Chest of Drawers</a></li>
@@ -198,9 +198,9 @@ return (
                         </ul>
                         </div> 
                         
-                        <div class="rowone">
+                        <div className="rowone">
                         <header>Kids Storage</header>  
-                        <ul class="mega-links c">
+                        <ul className="mega-links c">
                             <li><a href="/">Book Shelves</a></li>
                             <li><a href="/">Book Cases</a></li>
                             <li><a href="/">Drawers</a></li>
@@ -211,12 +211,12 @@ return (
                         </ul>
                         </div>
         
-                        <div class="rowone">
-                        <img alt="imgtag" class="d"src="https://ii1.pepperfry.com/media/wysiwyg/banners/2021_hover_Cabinetry.png"/>
+                        <div className="rowone">
+                        <img alt="imgtag" className="d"src="https://ii1.pepperfry.com/media/wysiwyg/banners/2021_hover_Cabinetry.png"/>
                         </div>
         
-                        {/* <div class="one">
-                        <h1 class="brand">Top Brands</h1>
+                        {/* <div className="one">
+                        <h1 className="brand">Top Brands</h1>
                         <img alt="imgtag" src="https://ii2.pepperfry.com/media/wysiwyg/banners/Home-Nilkamal.jpg"/>
                         <img alt="imgtag" src="https://ii2.pepperfry.com/media/wysiwyg/banners/Godrej-Interio.jpg"/>
                         <img alt="imgtag" src="https://ii2.pepperfry.com/media/wysiwyg/banners/Mintwood.jpg"/>
@@ -227,11 +227,11 @@ return (
                         </div>  
                     </div></li>
                 <li><a href="/">Beds</a>
-                    <div class="mega-box">
-                        <div class="content">
-                            <div class="rowone">
+                    <div className="mega-box">
+                        <div className="content">
+                            <div className="rowone">
                             <header>Kids & Teens</header>  
-                            <ul class="mega-links a">
+                            <ul className="mega-links a">
                                 <li><a href="/">Cribs</a></li>
                                 <li><a href="/">Single Beds</a></li>
                                 <li><a href="/">Double Beds</a></li>
@@ -246,9 +246,9 @@ return (
                             </div>
                         
                         
-                        <div class="rowone">
+                        <div className="rowone">
                         <header>Mattresses</header>  
-                        <ul class="mega-links b">
+                        <ul className="mega-links b">
                             <li><a href="/">Single Bed Mattress</a></li>
                             <li><a href="/"> Queen Bed Mattress</a></li>
                             <li><a href="/"> King Bed Mattress</a></li>
@@ -257,9 +257,9 @@ return (
                             
                         </ul>
                         </div>
-                        <div class="rowone">
+                        <div className="rowone">
                             <header>By Style</header>  
-                            <ul class="mega-links c">
+                            <ul className="mega-links c">
                                 <li><a href="/">Modern </a></li>
                                 <li><a href="/">Mid-Century</a></li>
                                 <li><a href="/"> Contemporary </a></li>
@@ -273,12 +273,12 @@ return (
         
                             </ul>
                         </div>
-                        <div class="rowone">
-                        <img alt="imgtag" class="d"src="https://ii1.pepperfry.com/media/wysiwyg/banners/2021_hover_Beds.png"/>
+                        <div className="rowone">
+                        <img alt="imgtag" className="d"src="https://ii1.pepperfry.com/media/wysiwyg/banners/2021_hover_Beds.png"/>
                         </div>
         
-                        {/* <div class="one">
-                        <h1 class="brand">Top Brands</h1>
+                        {/* <div className="one">
+                        <h1 className="brand">Top Brands</h1>
                         <img alt="imgtag" src="https://ii2.pepperfry.com/media/wysiwyg/banners/Spacewood.jpg"/>
                         <img alt="imgtag" src="https://ii2.pepperfry.com/media/wysiwyg/banners/Hometown.jpg"/>
                         <img alt="imgtag" src="https://ii2.pepperfry.com/media/wysiwyg/banners/Woodsworth.jpg"/>
@@ -289,11 +289,11 @@ return (
                         </div>  
                     </div></li>
                 <li><a href="/">Mattresses</a>
-                    <div class="mega-box">
-                        <div class="content">
-                            <div class="rowone">
+                    <div className="mega-box">
+                        <div className="content">
+                            <div className="rowone">
                             <header>Mattresses</header>  
-                            <ul class="mega-links a">
+                            <ul className="mega-links a">
                                 <li><a href="/"> Mattress Sizes</a></li>
                                 <li><a href="/">Foldable Mattress</a></li>
                                 <li><a href="/"> Baby Mattress</a></li>
@@ -307,9 +307,9 @@ return (
                             </div>
                         
                         
-                        <div class="rowone">
+                        <div className="rowone">
                         <header>Mattress Type</header>  
-                        <ul class="mega-links a">
+                        <ul className="mega-links a">
                             <li><a href="/">Coir</a></li>
                             <li><a href="/">Foam </a></li>
                             <li><a href="/">Memory Foam </a></li>
@@ -322,9 +322,9 @@ return (
                             <li><a href="/"> Rebonded Foam </a></li>        
                         </ul>
                         </div>
-                        <div class="rowone">
+                        <div className="rowone">
                             <header>Mattress Brands</header>  
-                            <ul class="mega-links b">
+                            <ul className="mega-links b">
                                 <li><a href="/">Clouddio </a></li>
                                 <li><a href="/">Sleepyhead</a></li>
                                 <li><a href="/">Wake-fit </a></li>
@@ -338,12 +338,12 @@ return (
                             
                             </ul>
                         </div>
-                        <div class="rowone">
-                        <img alt="imgtag" class="d"src="https://ii1.pepperfry.com/media/wysiwyg/banners/2021_hover_Mattresses.png"/>
+                        <div className="rowone">
+                        <img alt="imgtag" className="d"src="https://ii1.pepperfry.com/media/wysiwyg/banners/2021_hover_Mattresses.png"/>
                         </div>
         
-                        {/* <div class="one1">
-                        <h1 class="brand">Top Brands</h1>
+                        {/* <div className="one1">
+                        <h1 className="brand">Top Brands</h1>
                         <img alt="imgtag" src="https://ii1.pepperfry.com/media/wysiwyg/banners/clouddio_135x36_1.jpg"/><br/>
                         <img alt="imgtag" src="https://ii1.pepperfry.com/media/wysiwyg/banners/i_sleep_seven_135x36.jpg"/><br/>
                         <img alt="imgtag" src="https://ii1.pepperfry.com/media/wysiwyg/banners/Comforto_135x36.jpg"/>
@@ -354,11 +354,11 @@ return (
                         </div>  
                     </div></li>
                 <li><a href="/"> Furnishings</a>
-                    <div class="mega-box">
-                        <div class="content">
-                            <div class="rowone">
+                    <div className="mega-box">
+                        <div className="content">
+                            <div className="rowone">
                             <header>Bed Linen</header>  
-                            <ul class="mega-links c">
+                            <ul className="mega-links c">
                                 <li><a href="/"> Bed Sheets </a></li>
                                 <li><a href="/"> Bedding Sets</a></li>
                                 <li><a href="/"> Pillows </a></li>
@@ -373,9 +373,9 @@ return (
                             </div>
                         
                         
-                        <div class="rowone">
+                        <div className="rowone">
                         <header>Curtains </header>  
-                        <ul class="mega-links a">
+                        <ul className="mega-links a">
                             <li><a href="/">Door Curtains</a></li>
                             <li><a href="/">Window Curtains </a></li>
                             <li><a href="/">Blinds & Shades </a></li>
@@ -385,9 +385,9 @@ return (
                         
                         </ul>
                         </div>
-                        <div class="rowone">
+                        <div className="rowone">
                             <header> Cushion & Covers</header>  
-                            <ul class="mega-links c">
+                            <ul className="mega-links c">
                                 <li><a href="/"> Decorative Cushions </a></li>
                                 <li><a href="/">Floor Cushions</a></li>
                                 <li><a href="/">Cushion Covers </a></li>
@@ -399,12 +399,12 @@ return (
                             
                             </ul>
                         </div>
-                        <div class="rowone">
-                        <img alt="imgtag" class="d"src="https://ii1.pepperfry.com/media/wysiwyg/banners/2021_hover_furnishing.png"/>
+                        <div className="rowone">
+                        <img alt="imgtag" className="d"src="https://ii1.pepperfry.com/media/wysiwyg/banners/2021_hover_furnishing.png"/>
                         </div>
         
-                        {/* <div class="one">
-                            <h1 class="brand">Top Brands</h1>
+                        {/* <div className="one">
+                            <h1 className="brand">Top Brands</h1>
                             <img alt="imgtag" src="https://ii2.pepperfry.com/media/wysiwyg/banners/Spacewood.jpg"/>
                             <img alt="imgtag" src="https://ii2.pepperfry.com/media/wysiwyg/banners/Hometown.jpg"/>
                             <img alt="imgtag" src="https://ii2.pepperfry.com/media/wysiwyg/banners/Woodsworth.jpg"/>
@@ -415,11 +415,11 @@ return (
                         </div>  
                     </div></li>
                 <li><a href="/">Decor</a>
-                    <div class="mega-box">
-                        <div class="content">
-                            <div class="rowone">
+                    <div className="mega-box">
+                        <div className="content">
+                            <div className="rowone">
                             <header>Wall Art</header>  
-                            <ul class="mega-links b">
+                            <ul className="mega-links b">
                                 <li><a href="/">Metal Wall Art</a></li>
                                 <li><a href="/">Wooden Wall Art</a></li>
                                 <li><a href="/">Paintings</a></li>
@@ -434,9 +434,9 @@ return (
                             </div>
                         
                         
-                        <div class="rowone">
+                        <div className="rowone">
                         <header>Spiritual</header>  
-                        <ul class="mega-links b">
+                        <ul className="mega-links b">
                             <li><a href="/"> Mandirs </a></li>
                             <li><a href="/"> Pooja Shelves  </a></li>
                             <li><a href="/"> Religious Idols  </a></li>
@@ -450,9 +450,9 @@ return (
                             
                         </ul>
                         </div>
-                        <div class="rowone">
+                        <div className="rowone">
                             <header>Home Garden</header>  
-                            <ul class="mega-links a">
+                            <ul className="mega-links a">
                                 <li><a href="/">Pots & Planters </a></li>
                                 <li><a href="/"> Planter Stands</a></li>
                                 <li><a href="/">Natural Plants  </a></li>
@@ -466,12 +466,12 @@ return (
                             
                             </ul>
                         </div>
-                        <div class="rowone">
-                        <img alt="imgtag" class="d"src="https://ii1.pepperfry.com/media/wysiwyg/banners/2021_hover_Decor.png"/>
+                        <div className="rowone">
+                        <img alt="imgtag" className="d"src="https://ii1.pepperfry.com/media/wysiwyg/banners/2021_hover_Decor.png"/>
                         </div>
         
-                        {/* <div class="one">
-                        <h1 class="brand">Top Brands</h1>
+                        {/* <div className="one">
+                        <h1 className="brand">Top Brands</h1>
                         <img alt="imgtag" src="https://ii2.pepperfry.com/media/wysiwyg/banners/Fabuliv.jpg"/>
                         <img alt="imgtag" src="https://ii2.pepperfry.com/media/wysiwyg/banners/Ugaoo.jpg"/>
                         <img alt="imgtag" src="https://ii2.pepperfry.com/media/wysiwyg/banners/Ellementry.jpg"/>
@@ -482,11 +482,11 @@ return (
                         </div>  
                     </div></li>
                 <li><a href="/"> Lighting</a>
-                    <div class="mega-box">
-                        <div class="content">
-                            <div class="rowone">
+                    <div className="mega-box">
+                        <div className="content">
+                            <div className="rowone">
                             <header>Wall Lights</header>  
-                            <ul class="mega-links b">
+                            <ul className="mega-links b">
                                 <li><a href="/">Wall Sconces</a></li>
                                 <li><a href="/">Wall Lanterns</a></li>
                                 <li><a href="/">Picture Lights</a></li>
@@ -495,9 +495,9 @@ return (
                             </div>
                         
                         
-                        <div class="rowone">
+                        <div className="rowone">
                         <header>LED Lights</header>  
-                        <ul class="mega-links b">
+                        <ul className="mega-links b">
                             <li><a href="/"> Lamps </a></li>
                             <li><a href="/"> Ceiling Lights  </a></li>
                             <li><a href="/"> Wall Lights  </a></li>
@@ -505,9 +505,9 @@ return (
                             
                         </ul>
                         </div>
-                        <div class="rowone">
+                        <div className="rowone">
                             <header>Table Lamps</header>  
-                            <ul class="mega-links a">
+                            <ul className="mega-links a">
                                 <li><a href="/">Table Lamps </a></li>
                                 <li><a href="/">Study Lamps</a></li>
                                 <li><a href="/">Table Lanterns </a></li>
@@ -515,12 +515,12 @@ return (
                             
                             </ul>
                         </div>
-                        <div class="rowone">
-                        <img alt="imgtag" class="d"src="https://ii1.pepperfry.com/media/wysiwyg/banners/2021_hover_Lighting.png"/>
+                        <div className="rowone">
+                        <img alt="imgtag" className="d"src="https://ii1.pepperfry.com/media/wysiwyg/banners/2021_hover_Lighting.png"/>
                         </div>
 {/*         
-                        <div class="one">
-                        <h1 class="brand">Top Brands</h1>
+                        <div className="one">
+                        <h1 className="brand">Top Brands</h1>
                         <img alt="imgtag" src="https://ii2.pepperfry.com/media/wysiwyg/banners/Philips-Logo.jpg"/>
                         <img alt="imgtag" src="https://ii2.pepperfry.com/media/wysiwyg/banners/Kapoor-E-illuminations.jpg"/>
                         <img alt="imgtag" src="https://ii2.pepperfry.com/media/wysiwyg/banners/Eliante.jpg"/>
@@ -530,11 +530,11 @@ return (
                         </div>  
                     </div></li>
                 <li><a href="/">Appliances</a>
-                    <div class="mega-box">
-                        <div class="content">
-                            <div class="rowone">
+                    <div className="mega-box">
+                        <div className="content">
+                            <div className="rowone">
                             <header>Heating & Cooling</header>  
-                            <ul class="mega-links a">
+                            <ul className="mega-links a">
                                 <li><a href="/">Air Conditioners</a></li>
                                 <li><a href="/">Air Coolers</a></li>
                                 <li><a href="/">Fans</a></li>
@@ -544,9 +544,9 @@ return (
                             </div>
                         
                         
-                        <div class="rowone">
+                        <div className="rowone">
                         <header>Chimneys</header>  
-                        <ul class="mega-links b">
+                        <ul className="mega-links b">
                             <li><a href="/"> Wall-Mounted </a></li>
                             <li><a href="/"> Island Chimneys  </a></li>
                             <li><a href="/"> Designer Chimneys  </a></li>
@@ -554,21 +554,21 @@ return (
                             
                         </ul>
                         </div>
-                        <div class="rowone">
+                        <div className="rowone">
                             <header>OTGs</header>  
-                            <ul class="mega-links b">
+                            <ul className="mega-links b">
                                 <li><a href="/">Microwaves </a></li>
                                 <li><a href="/">Ovens & OTGs</a></li>
                                 <li><a href="/">Fryers  </a></li>
                                 
                             </ul>
                         </div>
-                        <div class="rowone">
-                        <img alt="imgtag" class="d"src="https://ii1.pepperfry.com/media/wysiwyg/banners/2021_hover_Appliances.png"/>
+                        <div className="rowone">
+                        <img alt="imgtag" className="d"src="https://ii1.pepperfry.com/media/wysiwyg/banners/2021_hover_Appliances.png"/>
                         </div>
         
-                        {/* <div class="one">
-                        <h1 class="brand">Top Brands</h1>
+                        {/* <div className="one">
+                        <h1 className="brand">Top Brands</h1>
                         <img alt="imgtag" src="https://ii2.pepperfry.com/media/wysiwyg/banners/Philips-Logo.jpg"/>
                         <img alt="imgtag" src="https://ii2.pepperfry.com/media/wysiwyg/banners/WonderChef-Logo.jpg"/>
                         <img alt="imgtag" src="https://ii2.pepperfry.com/media/wysiwyg/banners/Atomberg-logo.jpg"/>
@@ -579,11 +579,11 @@ return (
                         </div>  
                     </div></li>
                 <li><a href="/"> Modular</a>
-                    <div class="mega-box">
-                        <div class="content">
-                            <div class="rowone">
+                    <div className="mega-box">
+                        <div className="content">
+                            <div className="rowone">
                             <header>Modular Kitchens</header>  
-                            <ul class="mega-links a">
+                            <ul className="mega-links a">
                                 <li><a href="/">Straight Kitchen </a></li>
                                 <li><a href="/">L Shaped Kitchen </a></li>
                                 <li><a href="/">Parallel Kitchen</a></li>
@@ -592,23 +592,23 @@ return (
                             </ul>
                             </div>
                         
-                        <div class="rowone">
+                        <div className="rowone">
                         <header>Modular Wardrobes</header>  
-                        <ul class="mega-links b">
+                        <ul className="mega-links b">
                             <li><a href="/"> Hinged Wardrobes </a></li>
                             
                         </ul>
                         </div>
                         
-                        <div class="rowone">
-                        <img alt="imgtag" class="d1"src="https://ii2.pepperfry.com/media/wysiwyg/banners/Modular%206.png" />
+                        <div className="rowone">
+                        <img alt="imgtag" className="d1"src="https://ii2.pepperfry.com/media/wysiwyg/banners/Modular%206.png" />
                         </div>
         
                         </div>  
                     </div></li>
                     
             </ul>   
-            <div class="last">
+            <div className="last">
                 <p>Need Help?</p>
             </div>
             </div>
