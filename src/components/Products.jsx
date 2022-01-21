@@ -24,12 +24,7 @@ return (
 <div>
     <Header />
 
-    <div className='product' >
-        <h1>Square Bean Bags with Beans</h1>
-        <div>Go Back To Bean Bags with Beans</div>
-
-    </div>
-    <hr />
+    
     <div className='flex'>
     <ProductsSidebar />
 

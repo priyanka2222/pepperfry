@@ -1,9 +1,53 @@
 import '../styles/Header.css'
 import { Link } from 'react-router-dom'
+import { useState } from 'react';
+import Button from '@mui/material/Button';
+import Modal from '@mui/material/Modal';
+import Box from '@mui/material/Box';
+import {Signup} from './Signup'
 
 export const Header = () => {
-return (
+    const [open, setOpen] = useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
 
+    const [openlogin, setOpenLogin] = useState(false);
+  const handleLogin = () => {
+      setOpenLogin(true)
+      setOpen(false)
+    };
+  const handleLoginClose = () => setOpenLogin(false);
+
+  const style = {
+    position: 'absolute',
+    top: '23%',
+    left: '80%',
+    transform: 'translate(-50%, -50%)',
+   background: "white",
+    border: '1px solid #000',
+    width : "250px",
+    height : '150px' ,
+    p: 4,
+  };
+  const buttonstyle = {
+      color : "white",
+      background:"#ff7035",
+      fontSize:"17px"
+  }
+  const loginStyle = {
+   
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+   background: "white",
+    border: '1px solid #000',
+    width : "655px",
+    // height : '150px' ,
+    p: 4,
+  }
+
+return (
 <div className='HeadMain'>
     <div id="header">
         <div id="head1">
@@ -30,13 +74,34 @@ return (
                     
                 </div>
                 <div  className="items">
-                    <img alt="imgtag" src="	https://ii1.pepperfry.com/images/svg/header-profile-icon-2021.svg
-                    "/>
                     
+                    <Button onClick={handleOpen}><img alt="imgtag" src="https://ii1.pepperfry.com/images/svg/header-profile-icon-2021.svg
+                    "/></Button>
                 </div>
-            
             </div>
         </div>
+        <Modal
+            open={open}
+            onClose={handleClose}
+            aria-labelledby="modal-modal-title"
+            aria-describedby="modal-modal-description"
+        >
+            <Box sx={style}>
+                <Button onClick={handleLogin } style={buttonstyle} >Login/Register</Button>
+                <p>To access your account & manage orders</p>
+            </Box>
+        </Modal>
+
+        <Modal
+            open={openlogin}
+            onClose={handleLoginClose}
+            aria-labelledby="modal-modal-title"
+            aria-describedby="modal-modal-description"
+        >
+            <Box sx={loginStyle}>
+                <Signup />
+            </Box>
+        </Modal>
 
         <nav>
             <div className="wrapper">
@@ -93,16 +158,7 @@ return (
                     <div className="rowone">
                         <img alt="imgtag" className="d" src="https://ii1.pepperfry.com/media/wysiwyg/banners/2021_hover_Furniture.png"/>
                     </div>
-{/* 
-                    <div className="one">
-                        <h1 className="brand">Top Brands</h1>
-                        <img alt="imgtag" src="https://ii2.pepperfry.com/media/wysiwyg/banners/Spacewood.jpg"/>
-                        <img alt="imgtag" src="https://ii2.pepperfry.com/media/wysiwyg/banners/Hometown.jpg "/>
-                        <img alt="imgtag" src="https://ii2.pepperfry.com/media/wysiwyg/banners/Mintwood.jpg"/>
-                        <img alt="imgtag" src="https://ii2.pepperfry.com/media/wysiwyg/banners/Casacraft.jpg"/>
-                    </div> */}
-
-                    
+   
                     </div>  
                     </div>
                 </li>

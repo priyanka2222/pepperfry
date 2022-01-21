@@ -1,5 +1,9 @@
+
+
 export const Checkout = ()=>{
     return (
-        <div></div>
+        <div>
+
+        </div>
     )
 }
