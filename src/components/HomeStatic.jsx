@@ -1,13 +1,13 @@
 import React from "react";
-
+import { Slideshow } from "./Slideshow";
 import '../styles/HomeStatic.css'
 
 
 export const HomeStatic = () => {
 
     return (
-        
         <div className="main">
+            {/* <Slideshow /> */}
             
             <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"></link>
             <div className="main-one">
@@ -78,18 +78,6 @@ export const HomeStatic = () => {
                 <div className="main-one-head">
                     <h1 className="one-head ">Handpicked For Your Home</h1>
 
-                    <div className="arrow"> <span className="swiper-button-prev"> <i class="uil uil-angle-left-b"></i> </span> 
-                        <span className="swiper-button-next"> <i class="uil uil-angle-right-b"></i>  </span></div>
-                    {/* <span class="swiper-button-prev">
-                        <i class="uil uil-angle-left-b swiper-icon"></i>
-                    </span>
-                    <span class="swiper-button-next">
-                        <i class="uil uil-angle-right-b swiper-icon"></i>
-                    </span> */}
-
-                    {/* <!-- Add Pagination --> */}
-                    <div class="swiper-pagination"></div>
-
                 </div>
                 <div className="two swiper-wrapper">
 
@@ -108,21 +96,6 @@ export const HomeStatic = () => {
                         <h6 className="three-head">Avantika</h6>
                         <p className="one2 three-img-head-color">Mughal Grandeur</p>
                     </div>
-                    <div className="three1 swiper-slide">
-                        <img className="img4" src="https://ii2.pepperfry.com/media/wysiwyg/banners/Home_collection_web_21122021_4.jpg" alt="" />
-                        <h6 className="three-head">Tectona</h6>
-                        <p className="one2 three-img-head-color">Elegant & Sleek</p>
-                    </div>
-                    <div className="three1 swiper-slide">
-                        <img className="img4" src="https://ii3.pepperfry.com/media/wysiwyg/banners/Home_collection_web_21122021_5.jpg" alt="" />
-                        <h6 className="three-head">Siramika</h6>
-                        <p className="one2 three-img-head-color">Painted Majolica tiles</p>
-                    </div>
-                    <div className="three1 swiper-slide">
-                        <img className="img4" src="https://ii1.pepperfry.com/media/wysiwyg/banners/Home_collection_web_21122021_6.jpg" alt="" />
-                        <h6 className="three-head">Azalea</h6>
-                        <p className="one2 three-img-head-color">Glam & Grace</p>
-                    </div>
                 </div>
 
 
@@ -132,8 +105,7 @@ export const HomeStatic = () => {
 
                     <div className="main-one-head">
                         <h1 className="one-head">Cherry On The Top</h1>
-                        <div className="arrow"> <span className="swiper-button-prev"> <i class="uil uil-angle-left-b"></i> </span>
-                            <span className="swiper-button-next"> <i class="uil uil-angle-right-b"></i>  </span></div>
+                        
                     </div>
                 </div>
 
@@ -158,16 +130,6 @@ export const HomeStatic = () => {
                         <img className="img5" src="https://ii2.pepperfry.com/media/wysiwyg/banners/home_decor_web_31122021_41.jpg" alt="" />
                         <h6 className="three-head">Carpets</h6>
                         <p className="one2 three-img-head-color">2184 Options</p>
-                    </div>
-                    <div className="three1">
-                        <img className="img51" src="https://ii3.pepperfry.com/media/wysiwyg/banners/Home_collection_web_21122021_5.jpg" alt="" />
-                        <h6 className="three-head">Mandir</h6>
-                        <p className="one2 three-img-head-color">396 Options</p>
-                    </div>
-                    <div className="three1">
-                        <img className="img5" src="https://ii1.pepperfry.com/media/wysiwyg/banners/home_decor_web_21122021_6.jpg" alt="" />
-                        <h6 className="three-head">Mirrors</h6>
-                        <p className="one2 three-img-head-color">767 Options</p>
                     </div>
                 </div>
             </div>
