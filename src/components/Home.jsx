@@ -13,13 +13,7 @@ export const Home = () => {
     return (
         <div>
 
-            <Header />
-            {/* <h2>Home page</h2>
-            <HomeStatic />
-             <Products />
-            <SingleProduct /> */}
-
-            <Cart />
+           
             <Payment />
         </div>
     )
