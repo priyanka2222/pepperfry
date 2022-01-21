@@ -1,10 +1,12 @@
 import '../styles/Products.css'
-import {FormControlLabel,Radio,RadioGroup,FormControl,FormLabel, FormGroup, Checkbox,ListItem, Button} from "@mui/material"
+import {ListItem, Button} from "@mui/material"
 import { Box } from '@mui/system'
 import {useEffect, useState} from 'react'
 import { apiurl } from '../utils/request';
 import {ProductsSidebar} from'./ProductsSidebar'
 import {Link} from 'react-router-dom'
+import { Header } from './Header';
+import {Footer} from './Footer'
 
 export const Products = () => {
     const [products , setProducts] = useState()
@@ -20,6 +22,7 @@ export const Products = () => {
     
 return (
 <div>
+    <Header />
 
     <div className='product' >
         <h1>Square Bean Bags with Beans</h1>
@@ -35,10 +38,10 @@ return (
 
         {products ? 
             products.map(e=>(
-                <Link key={e._id} to={`/product/${e._id}`}>
+                <Link id="productsMain" key={e._id} to={`/product/${e._id}`}>
                  <ListItem className='listitem' style={{display:"grid"}}>
                 <img style={{width:"280px", height:"300px"} } src={e.images[0]} alt="sofa1" />
-                <h4 style={{marginBottom:"6px"}}>{e.title}</h4>
+                <h4  style={{marginBottom:"6px"}}>{e.title}</h4>
                 <div style={{marginBottom:"5px"}}>{e.tag}</div>
                 <div className='price' >₹ {e.price}<span id="spandiscount"> ₹ {+e.price + 160}</span></div>
                 <div className='discount' >30%off<span id='spanbutton'><Button style={{backgroundColor:"orange"}} variant="contained">Add To Cart</Button></span></div>
@@ -53,6 +56,7 @@ return (
 
             </div>
         </div>
+        <Footer/>
     </div>
     )
 }
