@@ -31,30 +31,56 @@ export const Payment=()=>{
                                 <div>PAYTM</div>
 
                             </div>
-                            <div id="paymentcardbox">
-                                <label htmlFor="">NEW CARD</label>
-                                <br />
-                                <input type="text" name="card" id="cardnumber" placeholder="Enter Card Number" />
-                                <br />
 
-                                <div id="expiry">
-                                <label htmlFor="">Expiry</label>
-                                <input type="text" name="card" id="" placeholder="MM/YY" />
-            
-                                <label htmlFor="">CVV</label>
-                                <input type="password" name="card" id="" placeholder="Enter CVV" />
+                            <div id="container">
+    <div className="right-side">
+           <p>NEW CARD</p>
+           <div className="form">
+               <label for="">New Card</label><br /><br />
+               <input
+               id="input-card-num"
+               type="text"
+               placeholder="Enter Card Number"
+               />
+               <br />
+               <span id="card-num">Please Enter card Number</span><br />
+                  <div className="mid-two">
+                      <div>
+                             <label for="">Expiry</label><br /><br />
+                             <input
+                            id="input-date"
+                            type="text"
+                              placeholder="MM/YY"
+                              />
+                               <br />
+                           <span id="date">Please Enter expeiry date</span><br />
+                       </div>
+                        <div>
+                               <label for="">CVV</label><br /><br />
+                               <input
+                            id="input-cvv"
+                            type="text"
+                             placeholder="Enter CVV"
+                           /><br />
+                           <span id="cvv">Please Enter CVV</span><br />
+                      </div>
+                  </div>
+                   <label for="">Name on Card</label><br /><br />
+                   <input type="text" placeholder="Enter Name as on card" /><br /><br />
+                   <div className="check">
+                  <input type="checkbox" />&nbsp;&nbsp; Save this option securely for
+                   faster payment
+                   </div>
+                  <button>PROCEED</button>
+               </div>
+            </div>
+              
+    </div>
+                            
 
-
-                                </div>
-                                <br />
-                                <label htmlFor="">Name on Card</label>
-                                <br />
-                                <input type="password" name="card" id="cardname" placeholder="Enter Name" />
-
-                                <Button  id="proceedbutton" variant="contained">Proceed</Button>
-                                    
-                           </div>
-
+                            
+                            
+                           
 
 
 
@@ -75,18 +101,18 @@ export const Payment=()=>{
         
                     <div className="border" style={{padding:"10px"}}>
                         <div style={{display:"flex"}}>
-                          <div id="cartvalue">Cart Value</div>
-                          <div id="cartprice">26,000/-</div>
+                            <div id="cartvalue">Cart Value</div>
+                            <div id="cartprice">26,000/-</div>
                         </div>
                         <div style={{display:"flex"}}>
-                          <div id="retaildiscount">Retail Discount</div>
-                          <div id="retailprice" >(-)5,000/-</div>
+                            <div id="retaildiscount">Retail Discount</div>
+                            <div id="retailprice" >(-)5,000/-</div>
                         </div>
                         <div style={{fontSize:"11px"}}>Delivery & Assembly Charges Extra. Enter Pincode To Know</div>
                         <hr />
                         <div style={{display:"flex"}}>
-                          <h3>Total</h3>
-                          <div style={{marginLeft:"230px",marginTop:"20px"}}>25,000/-</div>
+                             <h3>Total</h3>
+                            <div style={{marginLeft:"230px",marginTop:"20px"}}>25,000/-</div>
                         </div>
                         <div id="inclusive">(inclusive of all taxes)</div>
                         <hr />
