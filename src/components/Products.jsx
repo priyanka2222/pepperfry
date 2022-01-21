@@ -6,7 +6,7 @@ import { apiurl } from '../utils/request';
 import {ProductsSidebar} from'./ProductsSidebar'
 import {Link} from 'react-router-dom'
 import { Header } from './Header';
-import { Footer } from '../../myfiles/Footer';
+import {Footer} from './Footer'
 
 export const Products = () => {
     const [products , setProducts] = useState()

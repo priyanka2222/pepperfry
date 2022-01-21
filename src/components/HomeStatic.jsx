@@ -1,5 +1,4 @@
 import React from "react";
-import { Slideshow } from "./Slideshow";
 import '../styles/HomeStatic.css'
 
 
