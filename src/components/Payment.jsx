@@ -1,5 +1,3 @@
-
-import { Button } from "@mui/material";
 import "../styles/Payment.css";
 
 
@@ -15,8 +13,6 @@ export const Payment=()=>{
                         Order Summary
                         </div>
                     </div>
-
-                    
 
                     <div id="paymentsection" >
                         <h4>Select Payment Method</h4>

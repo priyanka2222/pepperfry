@@ -170,8 +170,7 @@
  opacity: 0;
  visibility:hidden;
  transition:all 0.3s ease;
- 
- 
+ z-index: 10;
  }
  .mega-box .content{
  background:rgb(255, 250, 250);
@@ -194,7 +193,6 @@
  padding:10px 10px;
  }
  .rowone .mega-links li a{
- 
  
  display:block;
  }
