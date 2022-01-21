@@ -33,15 +33,13 @@ export const ProductsSidebar = () => {
 
       <hr />
       <FormControl>
-          <FormLabel  style={{fontWeight:"bold", color:"black"}}>Price</FormLabel >
-      
-      <FormGroup>
-      <FormControlLabel  control={<Checkbox   />} label="under ₹2,000" />
-      <FormControlLabel control={<Checkbox   />} label="₹2000 to ₹4000" />
-      <FormControlLabel control={<Checkbox   />} label="₹4000 to ₹6000" />
-      <FormControlLabel control={<Checkbox   />} label="₹6000 to ₹10000" />
-      </FormGroup>
+        <FormLabel  style={{fontWeight:"bold", color:"black"}}>Price</FormLabel >
+        <FormGroup>
+            <FormControlLabel  control={<Checkbox   />} label="under ₹2,000" />
+            <FormControlLabel control={<Checkbox   />} label="₹2000 to ₹4000" />
+            <FormControlLabel control={<Checkbox   />} label="₹4000 to ₹6000" />
+            <FormControlLabel control={<Checkbox   />} label="₹6000 to ₹10000" />
+        </FormGroup>
       </FormControl>
-
   </div>
 };
