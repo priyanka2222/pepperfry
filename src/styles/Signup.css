@@ -1,0 +1,50 @@
+.loginMain{
+    display: flex;
+    background-color: white;
+    /* width: 500px; */
+    z-index: 100;
+}
+.loginMain #cancel{
+    background-color: white;
+    border: none;
+    width: 10px;
+    height: 10px;
+    font-size: 20px;
+    position: absolute;
+    text-align: right;
+    top:0;
+    margin-left: 280px;
+}
+.loginMain .form{
+    margin: 20px 40px;
+}
+.loginMain .form form{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    
+}
+.loginMain .form form input{
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid gray;
+    font-size: 15px;
+    background-color: white;
+    padding: 6px;
+}
+.loginMain .form > p{
+    font-size: 12px;
+}
+.loginMain #signupTxt{
+    text-align: center;
+    margin-top: 50px;
+}
+.loginMain #loginBtn{
+    background-color: white;
+}
+.loginMain .form img{
+    width : 30px
+}
+.loginMain #loginPoster img{
+    height: 450px;
+}

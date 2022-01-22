@@ -1,14 +1,17 @@
 import { HomeStatic } from "./HomeStatic"
+
 import { Products } from "./Products"
 import { SingleProduct } from "./SingleProduct"
 import { CartFooter } from "./CartFooter"
 import { CartHeader } from "./CartHeader"
 import { Checkout } from "./Checkout"
+import { Header } from "./Header"
+import {Footer} from './Footer'
 
 export const Home = () => {
     return (
         <div>
-         <h2>Home page</h2>
+            <Header />
             <HomeStatic />
             <Products />
             <SingleProduct />

@@ -1,0 +1,274 @@
+#cartpage {
+  margin: 10px 50px;
+}
+#cart {
+  width: 800px;
+}
+#summary {
+  width: 380px;
+  margin-left: 20px;
+}
+
+#maindiv {
+  display: flex;
+  margin-top: 10px;
+}
+
+.border {
+  border: 1px solid #e7e7e7;
+  margin: 10px;
+}
+
+#retaildiscount {
+  color: #588209;
+  font-size: 0.8rem;
+}
+
+#cartvalue {
+  font-size: 0.8rem;
+}
+
+#retailprice {
+  margin-left: 180px;
+  color: #588209;
+  font-size: 0.8rem;
+}
+
+#cartprice {
+  margin-left: 220px;
+  font-size: 0.8rem;
+}
+
+#inclusive {
+  font-size: 13px;
+  margin-left: 0px;
+  text-align: end;
+}
+
+#placeorderbutton {
+  background-color: coral;
+  width: 100%;
+  height: 40px;
+}
+#label {
+  font-size: 15px;
+  color: grey;
+  margin-top: 10px;
+}
+
+#checkbox {
+  width: 20px;
+  height: 20px;
+}
+.checkboxdiv {
+  margin: 6px;
+}
+
+#pincode {
+  display: flex;
+  width: 100%;
+  height: 50px;
+  background-color: #f5f5f5;
+  border: 1px solid #e7e7e7;
+}
+
+#pincode :nth-child(1) {
+  color: #969696;
+  padding: 10px;
+}
+
+#paymentbox {
+  border: 1px solid black;
+}
+
+#paymentoptions > div {
+  padding: 20px;
+  width: 170px;
+  background-color: rgb(216, 205, 205);
+  color: black;
+  border: 1px solid whitesmoke;
+  font-size: 17px;
+  font-weight: 550;
+}
+
+#paymentoptions :nth-child(1) {
+  background-color: black;
+  color: blanchedalmond;
+}
+
+#paymentbox {
+  display: flex;
+}
+#bootstrap-input {
+  width: 300px;
+}
+#cardnumber {
+  padding: 5px 30px;
+}
+
+#newcard {
+  padding: 5px 32px;
+}
+
+#paymentcardbox {
+  width: 600px;
+  margin: 50px;
+  border: 1.5px solid grey;
+}
+
+#paymentcardbox > label {
+  margin-left: 20px;
+}
+
+#paymentcardbox > #cardnumber {
+  width: 320px;
+  height: 22px;
+
+  margin: 10px;
+  border-radius: 8px;
+  border: 1.5px solid black;
+}
+
+#expiry {
+  margin-top: 30px;
+}
+
+#expiry > input {
+  width: 180px;
+  height: 30px;
+  margin: 5px;
+  border-radius: 8px;
+  border: 1.5px solid black;
+}
+
+#cardname {
+  width: 400px;
+  height: 30px;
+
+  margin: 10px;
+  border-radius: 8px;
+  border: 1.5px solid black;
+}
+
+#paymentcardbox > label {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+#expiry > label {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+#proceedbutton {
+  width: 100%;
+  margin-top: 50px;
+}
+
+#container {
+  border: 1px solid rgb(233, 229, 229);
+  width: 380px;
+  height: 420px;
+  margin: auto;
+  margin-top: 40px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+}
+
+.right-side {
+  box-sizing: border-box;
+  width: 418px;
+  padding: 20px;
+}
+.nav-logo {
+  display: flex;
+  gap: 140px;
+  align-items: center;
+}
+.nav-logo > div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.nav-logo > img {
+  width: 70px;
+  height: 30px;
+}
+
+.tId {
+  font-family: "Avenir-Light";
+  font-size: 10px;
+  color: #999999;
+}
+.blue-box {
+  border-radius: 10px;
+  background-color: #4a90e2;
+  text-align: center;
+  height: 80px;
+  font-family: "Avenir-Medium";
+  font-size: 12px;
+  font-weight: 500;
+  box-sizing: border-box;
+  padding-top: 5px;
+  margin-top: 200px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.blue-box > p {
+  width: 250px;
+}
+.right-side > p {
+  font-family: "avenir-heavy";
+  font-weight: 400;
+  font-size: 11px;
+  color: #8e8e8e;
+}
+.form {
+  font-family: "avenir-heavy";
+  font-weight: 400;
+  font-size: 13px;
+  color: #8e8e8e;
+  padding: 30px;
+  height: 340px;
+}
+.form > input {
+  height: 34px;
+  width: 300px;
+  padding-left: 10px;
+  border: 1px solid #8e8e8e;
+  border-radius: 3px;
+}
+#card-num,
+#date,
+#cvv {
+  color: red;
+  display: none;
+}
+.mid-two {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+}
+.mid-two input {
+  width: 130px;
+  height: 34px;
+
+  padding-left: 10px;
+  border: 1px solid #8e8e8e;
+  border-radius: 3px;
+}
+.check {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+button {
+  width: 100%;
+  height: 40px;
+  background-color: #4a90e2;
+  border: none;
+  border-radius: 5px;
+  color: wheat;
+  margin-top: 20px;
+}

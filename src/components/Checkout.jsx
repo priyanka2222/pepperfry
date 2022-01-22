@@ -1,3 +1,4 @@
+
 import React from "react";
 
 import '../styles/Checkout.css'
@@ -503,6 +504,5 @@ export const Checkout = () => {
                 </div>
             </div>
         </div>
-
     )
 }
