@@ -1,8 +1,4 @@
-
-import { Button } from "@mui/material";
 import "../styles/Payment.css";
-
-
 export const Payment=()=>{
     return (
         <div id="cartpage">
@@ -15,8 +11,6 @@ export const Payment=()=>{
                         Order Summary
                         </div>
                     </div>
-
-                    
 
                     <div id="paymentsection" >
                         <h4>Select Payment Method</h4>
@@ -74,59 +68,39 @@ export const Payment=()=>{
                   <button>PROCEED</button>
                </div>
             </div>
-              
-    </div>
-                            
-
-                            
-                            
-                           
-
-
-
-
-
-
-                        </div>
-                      
-                        
-                    </div>
-
-
-
-                    
-
-                </div>
-                <div id="summary">
-        
-                    <div className="border" style={{padding:"10px"}}>
-                        <div style={{display:"flex"}}>
-                            <div id="cartvalue">Cart Value</div>
-                            <div id="cartprice">26,000/-</div>
-                        </div>
-                        <div style={{display:"flex"}}>
-                            <div id="retaildiscount">Retail Discount</div>
-                            <div id="retailprice" >(-)5,000/-</div>
-                        </div>
-                        <div style={{fontSize:"11px"}}>Delivery & Assembly Charges Extra. Enter Pincode To Know</div>
-                        <hr />
-                        <div style={{display:"flex"}}>
-                             <h3>Total</h3>
-                            <div style={{marginLeft:"230px",marginTop:"20px"}}>25,000/-</div>
-                        </div>
-                        <div id="inclusive">(inclusive of all taxes)</div>
-                        <hr />
-                        <div style={{fontSize:"10px", margin:"20px 0px"}}>No Cost EMI Available Starting ₹ 5,641/month. EMI Starting ₹ 1,594/month</div>
-                    </div>
-
-
-                    
-                    <div className="checkboxdiv">
-                    <input id="checkbox" type="checkbox"  />&nbsp; <span id="label" >Rs.99 For COVID Relief Through GiveIndia.</span>
-                    </div>
-
-                </div>
-            </div>
+        </div>                        
         </div>
+    </div>
+
+        </div>
+        <div id="summary">
+
+            <div className="border" style={{padding:"10px"}}>
+                <div style={{display:"flex"}}>
+                    <div id="cartvalue">Cart Value</div>
+                    <div id="cartprice">26,000/-</div>
+                </div>
+                <div style={{display:"flex"}}>
+                    <div id="retaildiscount">Retail Discount</div>
+                    <div id="retailprice" >(-)5,000/-</div>
+                </div>
+                <div style={{fontSize:"11px"}}>Delivery & Assembly Charges Extra. Enter Pincode To Know</div>
+                <hr />
+                <div style={{display:"flex"}}>
+                        <h3>Total</h3>
+                    <div style={{marginLeft:"230px",marginTop:"20px"}}>25,000/-</div>
+                </div>
+                <div id="inclusive">(inclusive of all taxes)</div>
+                <hr />
+                <div style={{fontSize:"10px", margin:"20px 0px"}}>No Cost EMI Available Starting ₹ 5,641/month. EMI Starting ₹ 1,594/month</div>
+            </div>
+
+            <div className="checkboxdiv">
+            <input id="checkbox" type="checkbox"  />&nbsp; <span id="label" >Rs.99 For COVID Relief Through GiveIndia.</span>
+            </div>
+
+        </div>
+    </div>
+</div>
     )
 }

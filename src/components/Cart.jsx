@@ -6,28 +6,25 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 
 
-
 export const Cart=()=>{
-    return (
-        <div id="cartpage">
-            <h2>IN YOUR CART</h2>
-            <div id="maindiv" >
-                
+return (
+<div>
+    <div className="cartHead">
+
+    </div>
+    <div id="cartpage">
+        <h2>IN YOUR CART</h2>
+            <div id="maindiv" >               
                 <div id="cart">
                     <div id="pincode" >
                         <div>
                         Enter Your Pincode For Delivery  Assembly Information
                         </div>
                         <div>
-                        
                             <input type="pincode" /><span><button id="spanbutton2">Go</button></span>
-                            
                         </div>
 
                     </div>
-
-                    
-
                     <div id="productscart" >
                         <div>
                         <img src="https://ii1.pepperfry.com/media/catalog/product/b/o/90x99/box-sofa-bean-bag-with-beans-in-tan-colour-by-couchette-box-sofa-bean-bag-with-beans-in-tan-colour-b-ghoyd3.jpg" alt="img" />
@@ -52,10 +49,6 @@ export const Cart=()=>{
                              </Select>
                           </FormControl>
 
-
-
-
-
                          <Tooltip title="Delete">
                          <IconButton aria-label="delete" size="large">
                           <DeleteIcon fontSize="inherit" />
@@ -63,16 +56,9 @@ export const Cart=()=>{
                           </Tooltip>
                          
                           <BottomNavigationAction label="Favorites" icon={<FavoriteIcon />} />
-                        
 
                          </div>
-                        
                     </div>
-
-
-
-                    
-
                 </div>
                 <div id="summary">
                     <div className="border" style={{padding:"10px"}} >
@@ -84,8 +70,6 @@ export const Cart=()=>{
                         <div style={{marginLeft:"15px"}}><span><img style={{marginTop:"2px"}} src="https://ii1.pepperfry.com/images/svg/cpn-auto-fill-icon.svg" alt="icon" /></span>
                            &nbsp; &nbsp; &nbsp;  Apply Coupun<span id="couponicon"></span></div>
                     </div>
-
-
 
                     <div className="border" style={{padding:"10px"}}>
                         <div style={{display:"flex"}}>
@@ -107,8 +91,6 @@ export const Cart=()=>{
                         <div style={{fontSize:"10px", margin:"20px 0px"}}>No Cost EMI Available Starting ₹ 5,641/month. EMI Starting ₹ 1,594/month</div>
                     </div>
 
-
-                    
                     <div className="checkboxdiv">
                     <input id="checkbox" type="checkbox"  />&nbsp; <span id="label" >Rs.99 For COVID Relief Through GiveIndia.</span>
                     </div>
@@ -119,10 +101,10 @@ export const Cart=()=>{
                     </div>
                     <Button  id="placeorderbutton" variant="contained">Place Order</Button>
 
-
-
                 </div>
             </div>
         </div>
-    )
+        
+    </div>
+)
 }

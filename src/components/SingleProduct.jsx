@@ -3,6 +3,10 @@ import {useState, useEffect } from 'react'
 import { useParams, Link } from "react-router-dom";
 import { apiurl} from '../utils/request'
 import "../styles/SingleProduct.css";
+import {Header} from './Header'
+import {Footer} from './Footer'
+import { PrivateRoute } from './PrivateRoute';
+
 export const SingleProduct =()=>{
     const [product, setProductdata] = useState()
     const [qnt, setQnt] = useState()
@@ -30,12 +34,13 @@ export const SingleProduct =()=>{
     
 return (
 <div>
+    <Header />
     <div className="singleproductdiv">
-        <img  style={{margin:"10px 10px 10px 40px ", width:"600px", height:"600px"}}className="image" src={product.images[0]} alt="sofa" />
+        <img  style={{margin:"10px 10px 10px 40px ", height:"30%", width:"40%"}}className="image" src={product.images[0]} alt="sofa" />
         <div className="detailsdiv">
             
             <div id="bredcrumb"><Link id="bredcrumb" to="/">Home</Link> <span> {`>`} </span> Furniture {`>`} <Link id="bredcrumb" to="/products">Products</Link></div>
-            <h3 style={{marginBottom:"2px"}}>{product.title}</h3>
+            <h2 style={{marginBottom:"2px"}}>{product.title}</h2>
             <div style={{color:"#ff7035",marginBottom:"20px"}}>By {product.details.brand}</div>
             <div style={{fontWeight:"bold"}}>{product.details.warranty} Months Warranty</div>
             <h2 style={{fontWeight:"bolder"}}>₹ {product.price} <span style={{color:"green", fontWeight:"normal",fontSize:"16px"}}>({percent}% off)</span></h2>
@@ -43,7 +48,7 @@ return (
             <div style={{marginBottom:"5px"}}>EMI Starting ₹ 1,202 view options</div>
             <img style={{width:"600px"}} width={300} src="https://ii2.pepperfry.com/media/wysiwyg/banners/Promo_Web_VIPCoupon_2X_17012022_es.jpg" alt="img" />
             
-            <div style={{display:"flex",marginTop:"20px"}}>
+            {/* <div style={{display:"flex",marginTop:"20px"}}>
 
                 <div style={{fontWeight:"bold"}}>DELIVERY</div>
                     <div style={{marginLeft:"40px"}}>
@@ -53,7 +58,7 @@ return (
                     </div>
                 </div>
 
-            </div>
+            </div> */}
 
             <div style={{display:"flex",marginTop:"40px",marginBottom:"20px"}}>
             <FormControl style={{width:"100px"}}>
@@ -61,8 +66,7 @@ return (
                         <Select
                         labelId="demo-simple-select-label"
                         id="demo-simple-select"
-                        value={1}
-                        label="Qty"
+                        value={1} label="Qty"
                             onChange={(e)=>{
                             setQnt(e.target.value)
                             }}
@@ -77,8 +81,12 @@ return (
                     </Select>
 
             </FormControl>
+                <PrivateRoute>
                     <Button onClick={()=>handleAdd()} style={{width:"200px",margin:"0 20px",color:"black"}} variant="outlined">ADD TO CART</Button>
+                </PrivateRoute>
+                <PrivateRoute>
                     <Button style={{width:"200px",margin:"0 20px",backgroundColor:"#ff7035",color:"white"}} variant="contained">BUY NOW</Button>
+                </PrivateRoute>
             </div>
 
             <div style={{display:"flex"}}>
@@ -115,6 +123,7 @@ return (
             </div>
         </div>
     </div>
+    <Footer />
 </div>
 )
 }
