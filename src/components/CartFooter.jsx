@@ -1,6 +1,6 @@
 import React from "react";
 
-import '../styles/CartFooter.css'
+// import '../styles/CartFooter.css'
 
 export const CartFooter = () => {
     return (

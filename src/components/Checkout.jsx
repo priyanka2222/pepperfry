@@ -1,8 +1,5 @@
-
 import React from "react";
-
 import '../styles/Checkout.css'
-
 
 export const Checkout = () => {
     return (
@@ -38,7 +35,6 @@ export const Checkout = () => {
 
                             </div>
                         </div> */}
-
 
                     </div>
                     <div id="mid_left2">

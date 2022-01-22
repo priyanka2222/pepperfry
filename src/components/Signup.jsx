@@ -4,11 +4,17 @@ import '../styles/Signup.css';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Modal from '@mui/material/Modal';
-
+import {setUser} from "../Redux/User/action"
+import { useSelector, useDispatch } from 'react-redux';
 
 export const Signup = () => {
-    const [text, setText] = useState()
+    const {data} = useSelector((state)=>({
+            user : state.userState.data
+        }
+    ))
+    const dispatch = useDispatch()
 
+    const [text, setText] = useState()
     const handleChange = (e)=>{
         const {name, value} = e.target;
         setText({...text, [name]:value})
@@ -22,11 +28,11 @@ export const Signup = () => {
         })
         .then(res=>{
             console.log(res)
+           dispatch(setUser(res))
         })
         .catch(err=>{
             console.log(err)
         })
-        
     }
 
     return (
@@ -40,7 +46,7 @@ export const Signup = () => {
                 <form onSubmit={handleSubmit}>
                     <input onChange={handleChange} type="text" name="name" placeholder='Name' />
                     <input onChange={handleChange} type="email" name="email" placeholder='Email ID' />
-                    <input onChange={handleChange} type="password" name="password" placeholder='Password' />
+                    <input onChange={handleChange} type="text" name="password" placeholder='Password' />
                     <input style={{background : "#e75a16", color:"white", border : "none", padding:"10px"}} type="submit" value="Register" />
                 </form>
 

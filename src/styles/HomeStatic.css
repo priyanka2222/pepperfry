@@ -28,12 +28,6 @@
     display: grid;
     grid-template-columns: 33.3% 33.3% 33.3% 33.3% 33.3% 33.3%;
 }
-.swiper-wrapper{
-    
-        /* display: grid; */
-        grid-template-columns: 33.3% 33.3% 33.3% 33.3% 33.3% 33.3%;
-    
-}
 .two::-webkit-scrollbar{
     width: 1;
 }
@@ -97,7 +91,7 @@
     width: 445px;
 }
 .five{
-    /* display: grid; */
+    display: grid;
     flex-direction: row;;
     grid-template-columns: 25% 25% 25% 25% 25% 25%;
      gap: 1; 

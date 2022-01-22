@@ -1,8 +1,6 @@
 .singleproductdiv {
   display: flex;
-  margin-left: 40px;
-  margin-right: 40px;
-  margin-top: 10px;
+  margin: 15px 40px;
 }
 .detailsdiv {
   margin-right: 40px;
@@ -13,7 +11,7 @@
   text-decoration: line-through;
 }
 #bredcrumb{
-  font-size: 12px;
+  font-size: 14px;
   text-decoration: none;
   color: black;
 }

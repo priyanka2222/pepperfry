@@ -51,11 +51,11 @@ return (
 <div className='HeadMain'>
     <div id="header">
         <div id="head1">
-            <div id="img11">
+            <Link to="/" id="img11">
                 <img  src="https://ii1.pepperfry.com/images/pf-logo-bday-21.gif" alt="imgtasg" />
-            </div>
+            </Link>
             <div className="img12">
-                <Link className ="nam" to="/">SHOP</Link>
+                <Link className ="nam" to="/products">SHOP</Link>
                 <a className ="nam" href="/">GET INSPIRED</a>
                 <a className ="nam" href="/">PARTNER</a>
             </div>
@@ -69,12 +69,11 @@ return (
                     <img alt="imgtag" src="	https://ii1.pepperfry.com/images/svg/header-wishlist-icon-2021.svg"/>
                     
                 </div>
-                <div className="items">
+                <Link to="/cart" className="items">
                     <img alt="imgtag" src="https://ii1.pepperfry.com/images/svg/header-cart-icon-2021.svg"/>
                     
-                </div>
+                </Link>
                 <div  className="items">
-                    
                     <Button onClick={handleOpen}><img alt="imgtag" src="https://ii1.pepperfry.com/images/svg/header-profile-icon-2021.svg
                     "/></Button>
                 </div>

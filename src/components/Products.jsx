@@ -7,6 +7,7 @@ import {ProductsSidebar} from'./ProductsSidebar'
 import {Link} from 'react-router-dom'
 import { Header } from './Header';
 import {Footer} from './Footer'
+import { PrivateRoute } from './PrivateRoute';
 
 export const Products = () => {
     const [products , setProducts] = useState()
@@ -23,14 +24,11 @@ export const Products = () => {
 return (
 <div>
     <Header />
-
-    
     <div className='flex'>
     <ProductsSidebar />
 
     <div className='productdiv'>
     <Box sx={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)' }}>
-
         {products ? 
             products.map(e=>(
                 <Link id="productsMain" key={e._id} to={`/product/${e._id}`}>
@@ -39,7 +37,9 @@ return (
                 <h4  style={{marginBottom:"6px"}}>{e.title}</h4>
                 <div style={{marginBottom:"5px"}}>{e.tag}</div>
                 <div className='price' >₹ {e.price}<span id="spandiscount"> ₹ {+e.price + 160}</span></div>
-                <div className='discount' >30%off<span id='spanbutton'><Button style={{backgroundColor:"orange"}} variant="contained">Add To Cart</Button></span></div>
+                <div className='discount' >30%off<span id='spanbutton'>
+                    <PrivateRoute><Button style={{backgroundColor:"orange"}} variant="contained">Add To Cart</Button></PrivateRoute></span>
+                    </div>
                
                 </ListItem>
                 </Link>
