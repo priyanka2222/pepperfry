@@ -1,14 +1,17 @@
 import {useEffect, useState} from 'react';
 import { apiurl } from '../utils/request';
 import '../styles/Login.css';
-import {setUser} from "../Redux/User/action"
+import {setUser, getUser} from "../Redux/User/action"
 import { useSelector, useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 
 export const Login = () => {
-    const {data} = useSelector((state)=>({
-        user : state.userState.data
+    const {user} = useSelector((state)=>({
+        user : state.userState.user
     }))
+
     const dispatch = useDispatch()
+    let navigate = useNavigate()
 
     const [text, setText] = useState()
     const handleChange = (e)=>{
@@ -18,18 +21,22 @@ export const Login = () => {
     async function handleLogin(e){
         e.preventDefault()
         await apiurl.post('/user/login',{
-            name : text.name,
             email : text.email,
             password : text.password
         })
         .then(res=>{
-            console.log(res)
-        dispatch(setUser(res))
+            dispatch(setUser(res.data))
+            navigate(-1)
         })
         .catch(err=>{
+            alert(err)
             console.log(err)
         })
     }
+    if(user){
+        navigate("/", {replace : true})
+    }
+
   return (
     <div className='loginPage' >
         <div id="loginPoster">
@@ -42,7 +49,7 @@ export const Login = () => {
             <form onSubmit={handleLogin}>
                 <input onChange={handleChange} type="email" name="email" placeholder='Email ID' />
                 <input onChange={handleChange} type="text" name="password" placeholder='Password' />
-                <input style={{background : "#e75a16", color:"white", border : "none", padding:"10px"}} type="submit" value="Register" />
+                <input style={{background : "#e75a16", color:"white", border : "none", padding:"10px"}} type="submit" value="Login" />
             </form>
 
             <div id="signupTxt">

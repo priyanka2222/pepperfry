@@ -20,7 +20,7 @@ body{
     background-color: white;
     
 }
-#right_d{
+.checkout #right_d{
     width: 90px;
     height: 90px;
     font-size: 13px;
@@ -29,7 +29,6 @@ body{
 }
 #left_d{
     margin: 2%;
-    
 
 }
 #price_d{

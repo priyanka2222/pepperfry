@@ -8,6 +8,8 @@ import {Link} from 'react-router-dom'
 import { Header } from './Header';
 import {Footer} from './Footer'
 import { PrivateRoute } from './PrivateRoute';
+import { useSelector } from 'react-redux';
+
 
 export const Products = () => {
     const [products , setProducts] = useState()
@@ -15,6 +17,12 @@ export const Products = () => {
         getUser()
     }, []);
 
+    const {user} = useSelector((state)=>({
+        user : state.userState.user
+    }))
+    const handleAddCart = ()=>{
+        
+    }
     async function getUser(){
         const {data} = await apiurl.get('/product')
         setProducts(data)
@@ -38,12 +46,11 @@ return (
                 <div style={{marginBottom:"5px"}}>{e.tag}</div>
                 <div className='price' >₹ {e.price}<span id="spandiscount"> ₹ {+e.price + 160}</span></div>
                 <div className='discount' >30%off<span id='spanbutton'>
-                    <PrivateRoute><Button style={{backgroundColor:"orange"}} variant="contained">Add To Cart</Button></PrivateRoute></span>
+                    <Button onClick={handleAddCart} style={{backgroundColor:"orange"}} variant="contained">Add To Cart</Button></span>
                     </div>
                
                 </ListItem>
                 </Link>
-
             )) : <p>"Loading</p>
         }
   

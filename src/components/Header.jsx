@@ -5,18 +5,30 @@ import Button from '@mui/material/Button';
 import Modal from '@mui/material/Modal';
 import Box from '@mui/material/Box';
 import {Signup} from './Signup'
+import {setUser} from '../Redux/User/action'
+import { useSelector, useDispatch} from 'react-redux';
+
 
 export const Header = () => {
     const [open, setOpen] = useState(false);
+    const dispatch = useDispatch()
+
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
+    const {user} = useSelector((state)=>({
+        user : state.userState.user
+    }))
 
     const [openlogin, setOpenLogin] = useState(false);
   const handleLogin = () => {
       setOpenLogin(true)
       setOpen(false)
     };
-  const handleLoginClose = () => setOpenLogin(false);
+    const handleLoginClose = () => setOpenLogin(false);
+    const handleLogout=()=>{
+        dispatch(setUser())
+
+    }
 
   const style = {
     position: 'absolute',
@@ -86,8 +98,14 @@ return (
             aria-describedby="modal-modal-description"
         >
             <Box sx={style}>
-                <Button onClick={handleLogin } style={buttonstyle} >Login/Register</Button>
-                <p>To access your account & manage orders</p>
+                {user?<span>
+                    <h2 >{user.name}</h2>
+                    <Button onClick={handleLogout} style={buttonstyle} >Logout</Button>
+                </span> :
+                <span>
+                    <Button onClick={handleLogin } style={buttonstyle} >Login/Register</Button>
+                    <p>To access your account & manage orders</p>
+                </span>}
             </Box>
         </Modal>
 

@@ -1,14 +1,14 @@
 import { BottomNavigationAction, Button, FormControl, IconButton, InputLabel, MenuItem, Select, Tooltip } from "@mui/material";
 import "../styles/Cart.css";
-
-
 import DeleteIcon from '@mui/icons-material/Delete';
 import FavoriteIcon from '@mui/icons-material/Favorite';
+import {CartHeader} from './CartHeader'
 
 
 export const Cart=()=>{
 return (
 <div>
+    {/* <CartHeader /> */}
     <div className="cartHead">
 
     </div>

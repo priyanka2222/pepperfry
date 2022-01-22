@@ -81,12 +81,11 @@ return (
                     </Select>
 
             </FormControl>
-                <PrivateRoute>
+                
                     <Button onClick={()=>handleAdd()} style={{width:"200px",margin:"0 20px",color:"black"}} variant="outlined">ADD TO CART</Button>
-                </PrivateRoute>
-                <PrivateRoute>
+               
                     <Button style={{width:"200px",margin:"0 20px",backgroundColor:"#ff7035",color:"white"}} variant="contained">BUY NOW</Button>
-                </PrivateRoute>
+               
             </div>
 
             <div style={{display:"flex"}}>
