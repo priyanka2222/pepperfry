@@ -78,7 +78,7 @@ export const HomeStatic = () => {
                     <h1 className="one-head ">Handpicked For Your Home</h1>
 
                 </div>
-                <div className="two swiper-wrapper">
+                <div className=" swiper-wrapper">
 
                     <div className="three1 swiper-slide">
                         <img className="img4" src="https://ii2.pepperfry.com/media/wysiwyg/banners/Home_collection_web_21122021_1.jpg" alt="" />
