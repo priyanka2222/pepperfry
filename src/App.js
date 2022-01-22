@@ -6,7 +6,9 @@ import { SingleProduct } from './components/SingleProduct';
 import { Cart } from './components/Cart';
 import { Checkout } from './components/Checkout';
 import {Signup} from './components/Signup'
+import {Login} from './components/Login'
 import {PrivateRoute} from './components/PrivateRoute'
+
 function App() {
   return (
     <div className="App">
@@ -18,6 +20,7 @@ function App() {
         <Route path="/cart" element={<PrivateRoute><Cart /></PrivateRoute> } />
         <Route path="/checkout" element={<PrivateRoute><Checkout /></PrivateRoute>} />
         <Route path="/signup" element={<Signup />} />
+        <Route path="/login" element={<Login />} />
       </Routes>
       
     </div>
