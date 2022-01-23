@@ -30,10 +30,9 @@ export const Login = ({setClose}) => {
         })
         .then(res=>{
             dispatch(setUser(res.data))
-            // navigate(-1)
         })
         .catch(err=>{
-            // alert(err)
+          
         })
     }
     if(user){
@@ -42,9 +41,7 @@ export const Login = ({setClose}) => {
 
   return (
       <div>
-
     <Header />
-
     <div className='loginPage' >
        
         <div id="loginPoster">
@@ -52,7 +49,6 @@ export const Login = ({setClose}) => {
             <h2>You Will Be Able To Track Your Order, Use Wishlist & More.</h2>
         </div>
         <div className='form'>
-        {/* <button id="cancel">x</button> */}
 
             <form onSubmit={handleLogin}>
                 <input onChange={handleChange} type="email" name="email" placeholder='Email ID' />
