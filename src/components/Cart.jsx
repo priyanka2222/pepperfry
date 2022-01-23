@@ -3,11 +3,35 @@ import "../styles/Cart.css";
 import DeleteIcon from '@mui/icons-material/Delete';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import {CartHeader} from './CartHeader'
+import {CartFooter} from './CartFooter'
+import { useSelector, useDispatch } from 'react-redux';
+import {Link } from "react-router-dom";
+import { apiurl } from '../utils/request';
+import {useEffect, useState} from 'react'
 
 
 export const Cart=()=>{
+    const [cartItems, setCartItems] = useState()
+    const {user} = useSelector((state)=>({
+        user : state.userState.user
+    }))
+   
+    useEffect(() => {
+        getCart()
+    }, []);
+
+    async function getCart(){
+        var {data} = await apiurl.get(`/cart/${user._id}`)
+        setCartItems(data)
+      
+    }
+    if(!user || !cartItems){
+        return <p>Loading</p>
+    }
+
 return (
-<div>
+<div className="cart">
+    <CartHeader/>
     {/* <CartHeader /> */}
     <div className="cartHead">
 
@@ -16,55 +40,34 @@ return (
         <h2>IN YOUR CART</h2>
             <div id="maindiv" >               
                 <div id="cart">
-                    <div id="pincode" >
-                        <div>
-                        Enter Your Pincode For Delivery  Assembly Information
-                        </div>
-                        <div>
-                            <input type="pincode" /><span><button id="spanbutton2">Go</button></span>
-                        </div>
 
-                    </div>
-                    <div id="productscart" >
-                        <div>
-                        <img src="https://ii1.pepperfry.com/media/catalog/product/b/o/90x99/box-sofa-bean-bag-with-beans-in-tan-colour-by-couchette-box-sofa-bean-bag-with-beans-in-tan-colour-b-ghoyd3.jpg" alt="img" />
-                        </div>
-                         <div id="innerdata">
-                             <div>Box Sofa Bean Bag With Beans In Tan Colour By Couchette</div>
-                             <div>4 Years' Warranty, 100% Genuine</div>
-                             <div>Delivery By</div>
-                             <div>Enter Your Pincode Above To Get These Details</div>
-                         </div>
-
+                    {cartItems.cart.products.map((e)=>(
+                        <div key={e.product._id} id="productscart" >
+                            <div>
+                                <img  src={e.product.images[0]} alt="img" />
+                            </div>
+                            <div id="innerdata">
+                                <div>{e.product.title}</div>
+                               <div>Price : ₹{e.product.price} </div>
+                            </div>
 
                          <div id="increaseQty">
-                         <FormControl id="qtyform">
-                            <InputLabel id="demo-simple-select-label">QTY</InputLabel>
-                            <Select
-   
-                            >
-                            <MenuItem value={1}>1</MenuItem>
-                             <MenuItem value={2}>2</MenuItem>
-                             <MenuItem value={3}>3</MenuItem>
-                             </Select>
-                          </FormControl>
 
                          <Tooltip title="Delete">
-                         <IconButton aria-label="delete" size="large">
-                          <DeleteIcon fontSize="inherit" />
+                         <IconButton aria-label="delete" >
+                          <DeleteIcon id="deletebtn" fontSize="25px" />
                           </IconButton>
                           </Tooltip>
                          
-                          <BottomNavigationAction label="Favorites" icon={<FavoriteIcon />} />
+                          <BottomNavigationAction label="Favorites" icon={<FavoriteIcon  id="deletebtn"/>} />
 
                          </div>
                     </div>
+                    ))}
+                    
                 </div>
+
                 <div id="summary">
-                    <div className="border" style={{padding:"10px"}} >
-                       <h4 id="login">Login <span style={{fontWeight:"bold"}}>Or</span> Register</h4>
-                       <div id="logindown">For Express Checkout, Exciting Offers & More.</div>
-                    </div>
 
                     <div className="border" style={{padding:"6px"}}>
                         <div style={{marginLeft:"15px"}}><span><img style={{marginTop:"2px"}} src="https://ii1.pepperfry.com/images/svg/cpn-auto-fill-icon.svg" alt="icon" /></span>
@@ -72,19 +75,10 @@ return (
                     </div>
 
                     <div className="border" style={{padding:"10px"}}>
-                        <div style={{display:"flex"}}>
-                          <div id="cartvalue">Cart Value</div>
-                          <div id="cartprice">26,000/-</div>
-                        </div>
-                        <div style={{display:"flex"}}>
-                          <div id="retaildiscount">Retail Discount</div>
-                          <div id="retailprice" >(-)5,000/-</div>
-                        </div>
-                        <div style={{fontSize:"11px"}}>Delivery & Assembly Charges Extra. Enter Pincode To Know</div>
                         <hr />
                         <div style={{display:"flex"}}>
                           <h3>Total</h3>
-                          <div style={{marginLeft:"230px",marginTop:"20px"}}>25,000/-</div>
+                          <div style={{marginLeft:"230px",marginTop:"20px"}}>₹{cartItems.total}/-</div>
                         </div>
                         <div id="inclusive">(inclusive of all taxes)</div>
                         <hr />
@@ -92,19 +86,22 @@ return (
                     </div>
 
                     <div className="checkboxdiv">
-                    <input id="checkbox" type="checkbox"  />&nbsp; <span id="label" >Rs.99 For COVID Relief Through GiveIndia.</span>
+                        <input id="checkbox" type="checkbox"  />&nbsp; <span id="label" >Rs.99 For COVID Relief Through GiveIndia.</span>
                     </div>
 
                     <div className="checkboxdiv">
-                    <input id="checkbox" type="checkbox"  />&nbsp; <span id="label1" >Use GSTIN For Business Purchase (Optional)</span>
+                        <input id="checkbox" type="checkbox"  />&nbsp; <span id="label1" >Use GSTIN For Business Purchase (Optional)</span>
 
                     </div>
+                    <Link id="linkBtn" to="/checkout">
                     <Button  id="placeorderbutton" variant="contained">Place Order</Button>
+                    </Link>
 
                 </div>
             </div>
         </div>
-        
+        <hr />
+        <CartFooter />
     </div>
 )
 }

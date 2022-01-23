@@ -23,7 +23,9 @@
 .flex {
   display: flex;
 }
-
+.productdiv #link, #btn{
+  text-decoration: none;
+}
 #spandiscount {
   text-decoration: line-through;
   color: grey;

@@ -1,8 +1,10 @@
 .loginMain{
     display: flex;
+    justify-content: center;
     background-color: white;
     /* width: 500px; */
     z-index: 100;
+    margin: auto
 }
 .loginMain #cancel{
     background-color: white;

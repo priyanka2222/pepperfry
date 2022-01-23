@@ -216,5 +216,7 @@
  .d1{
     margin-right: 200px;
  }
-
+.HeadMain #link{
+    text-decoration: none;
+}
  

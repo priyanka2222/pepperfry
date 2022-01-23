@@ -4,8 +4,12 @@ import '../styles/Login.css';
 import {setUser, getUser} from "../Redux/User/action"
 import { useSelector, useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import { Header } from './Header';
+import { Footer } from './Footer';
+import {Link} from 'react-router-dom'
 
-export const Login = () => {
+
+export const Login = ({setClose}) => {
     const {user} = useSelector((state)=>({
         user : state.userState.user
     }))
@@ -26,11 +30,10 @@ export const Login = () => {
         })
         .then(res=>{
             dispatch(setUser(res.data))
-            navigate(-1)
+            // navigate(-1)
         })
         .catch(err=>{
-            alert(err)
-            console.log(err)
+            // alert(err)
         })
     }
     if(user){
@@ -38,13 +41,18 @@ export const Login = () => {
     }
 
   return (
+      <div>
+
+    <Header />
+
     <div className='loginPage' >
+       
         <div id="loginPoster">
             <p>Log in</p>
             <h2>You Will Be Able To Track Your Order, Use Wishlist & More.</h2>
         </div>
         <div className='form'>
-        <button id="cancel">x</button>
+        {/* <button id="cancel">x</button> */}
 
             <form onSubmit={handleLogin}>
                 <input onChange={handleChange} type="email" name="email" placeholder='Email ID' />
@@ -53,7 +61,9 @@ export const Login = () => {
             </form>
 
             <div id="signupTxt">
+                <Link to="/signup">
                 <button style={{border: "1px solid gray", padding:"5px 70px"}} id="loginBtn">Register</button>
+                </Link>
                 <span>
                     <p>OR Continue with</p>
                     <img src="https://ii1.pepperfry.com/images/social_login_fb_2x.png" alt="fb" />
@@ -61,6 +71,8 @@ export const Login = () => {
                 </span>
             </div>
         </div>
+    </div>
+    <Footer />
     </div>
 
   )

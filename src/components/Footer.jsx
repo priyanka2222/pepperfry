@@ -2,7 +2,7 @@ import {Link} from 'react-router-dom'
 import '../styles/Footer.css'
  export const Footer = () => {
     return (
-<div>
+<div className='FooterMain'>
 <footer>
     <div id="footer-wrap">
         <div id="top-footer">    

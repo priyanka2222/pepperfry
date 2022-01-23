@@ -1,4 +1,4 @@
-.footer_img{
+#Cartfooter .footer_img{
     width: 45px;
     height: 30px;
 }
@@ -37,7 +37,7 @@
     width: 55px;
     height: 18px;
 }
-#footer {
+#Cartfooter {
     width: 91.99%;
     height: 220px;
     padding: 5% 0 0 10%;
@@ -47,44 +47,36 @@
     display: grid;
     grid-template-columns: 33.3% 36.3% 30.3%;
     justify-content: center;
-
 }
 
-#footer1 {
+#Cartfooter #footer1 {
     height: 100%;
     /* background-color: violet; */
     padding: 0 0 0 15%;
 
 }
 
-#footer11 {
+#Cartfooter #footer11 {
     display: grid;
     grid-template-columns: 15% 15% 15% 15% 15%;
     grid-gap: 5px;
 }
 
-#footer2 {
-    height: 100px;
-    /* background-color: rgb(130, 137, 238); */
-
-}
-
 #footer3 {
     height: 100px;
     /* background-color: rgb(238, 182, 130); */
-
 }
 #footer4{
-    width: 100%;
+    /* width: 100%; */
     font-size: 13.8px;
-    padding: 6% 0 7% 100%;
-    color: #969696;
+    /* padding: 6% 0 7% 100%; */
+    /* color: #969696; */
 }
 
 #f1 {
     font-size: 13.8px;
     margin: 10px 0 10px 0;
-    color: #969696;
+    /* color: #969696; */
 }
 #give_india{
     display: grid;
@@ -93,12 +85,12 @@
 .f11 {
     margin-left: 5px;
     font-size: 12px;
-    color: #969696;
+
 }
 .f112{
     width: 100px;
     font-size: 12px;
-    color: #969696;
+    /* color: #969696; */
 }
 #f22{
     /* margin-top: 13px; */
@@ -132,7 +124,7 @@
     display: grid;
     grid-template-columns: 17% 17%;
 }
-.footer-header-space{
-    padding-bottom: 10px;
-    
+#Cartfooter #footer4{
+    margin-top:10px;
+    text-align: center;
 }

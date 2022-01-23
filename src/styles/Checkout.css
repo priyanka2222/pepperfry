@@ -1,6 +1,3 @@
-body{
-    font-family: 'Fira Sans',sans-serif;
-}
 #order_summary > img {
     width: 5%;
     height: 5%;
@@ -43,7 +40,7 @@ body{
 
 .checkout #middle {
     width: 90%;
-    height: 60%;
+    /* height: 60%; */
     display: grid;
     margin: 1% 1% 1% 1%;
     margin: auto;
@@ -51,10 +48,10 @@ body{
     grid-template-columns: 60% 30%;
     /* background-color: yellow; */
     justify-content: center;
+    adding : 20px;
 }
 #mid_left {
-    height: 900PX;
-    /* background-color: blue; */
+    
     display: grid;
     grid-template-rows: 5% 70%;
     overflow: scroll;
@@ -422,35 +419,6 @@ label{
     cursor: pointer;
 }
 
-/* #moblie_valid,
-#pin_valid,
-#address_valid,
-#moblie_valid1,
-#pin_valid1,
-#country_valid1,
-#address_valid1{
-    font-size: 14px;
-    margin-top: 1px;
-    padding-left: 270px;
-}
-#address_vaild1{
-    font-size: 14px;
-    margin-top: 1px;
-    padding-left: 270px;
-}
-#city_valid,
-#city_valid1{
-    font-size: 14px;
-    margin: 5% 0 0 25%;
-}
-#state_valid,
-#state_valid1{
-    padding-left: 70%;
-    padding-top: 5%;
-    width: 200px;
-    font-size: 14px;
-
-} */
 #address,#address1{
     height: 60px;
     border: 1px solid rgb(185, 185, 185);
@@ -470,6 +438,7 @@ label{
 #capital{
     text-transform: uppercase;
 }
+
 input[type="checkbox"]{
     appearance: none; 
     -webkit-appearance: none; 

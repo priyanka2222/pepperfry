@@ -1,10 +1,10 @@
 import React from "react";
 
-// import '../styles/CartFooter.css'
+import '../styles/CartFooter.css'
 
 export const CartFooter = () => {
     return (
-        <div id="footer">
+        <div id="Cartfooter">
             <div id="footer1">
                 <div id="f1" class="footer-header-space">WE ACCEPT</div>
                 <div id="footer11">
@@ -53,7 +53,7 @@ export const CartFooter = () => {
                 <div id="f2" class="footer-header-space">BUY SAFE, PAY EASY</div>
                 <div id="foot2">
                     <div id="f21">
-                        <img class="footer_img1" src="https://ii1.pepperfry.com/images/svg/calendar-1.svg" />
+                        <img alt="imgt" class="footer_img1" src="https://ii1.pepperfry.com/images/svg/calendar-1.svg" />
                     </div>
                     <div id="f22">
                         <span class="f22bold">No Cost EMIs: </span>Now pay in easy installments at no additional cost

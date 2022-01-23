@@ -5,29 +5,33 @@ import Button from '@mui/material/Button';
 import Modal from '@mui/material/Modal';
 import Box from '@mui/material/Box';
 import {Signup} from './Signup'
+import {Login} from './Login'
 import {setUser} from '../Redux/User/action'
 import { useSelector, useDispatch} from 'react-redux';
 
-
 export const Header = () => {
     const [open, setOpen] = useState(false);
-    const dispatch = useDispatch()
-
+    const [page, setPage] = useState(true)
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
+
     const {user} = useSelector((state)=>({
         user : state.userState.user
     }))
 
     const [openlogin, setOpenLogin] = useState(false);
-  const handleLogin = () => {
-      setOpenLogin(true)
-      setOpen(false)
+    const handleLogin = () => {
+        setOpenLogin(true)
+        setOpen(false)
     };
     const handleLoginClose = () => setOpenLogin(false);
+
+    const dispatch = useDispatch()
     const handleLogout=()=>{
         dispatch(setUser())
-
+    }
+    const handlePage =()=>{
+        setPage(!page)
     }
 
   const style = {
@@ -103,22 +107,24 @@ return (
                     <Button onClick={handleLogout} style={buttonstyle} >Logout</Button>
                 </span> :
                 <span>
-                    <Button onClick={handleLogin } style={buttonstyle} >Login/Register</Button>
+                    <Link id="link" to="/login"> <Button id="link" style={buttonstyle} >Login/Register</Button> </Link>
                     <p>To access your account & manage orders</p>
                 </span>}
             </Box>
         </Modal>
 
-        <Modal
+        {/* <Modal
             open={openlogin}
             onClose={handleLoginClose}
             aria-labelledby="modal-modal-title"
             aria-describedby="modal-modal-description"
         >
             <Box sx={loginStyle}>
-                <Signup />
+                <Login />
+       {page? <Login /> : <Signup setPage = {handlePage} />} 
+                
             </Box>
-        </Modal>
+        </Modal> */}
 
         <nav>
             <div className="wrapper">

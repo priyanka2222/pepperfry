@@ -5,6 +5,7 @@ import { apiurl} from '../utils/request'
 import "../styles/SingleProduct.css";
 import {Header} from './Header'
 import {Footer} from './Footer'
+import { useSelector, useDispatch} from 'react-redux';
 import { PrivateRoute } from './PrivateRoute';
 
 export const SingleProduct =()=>{
@@ -19,6 +20,22 @@ export const SingleProduct =()=>{
         const {data} = await apiurl.get(`/product/${id}`)
         setProductdata(data)
     }
+    const {user} = useSelector((state)=>({
+        user : state.userState.user
+    }))
+    async function handleAddCart(id){
+        await apiurl.post('/product',{
+            user : user.id,
+            products : {
+                product : id
+            }
+        })
+        .then((res)=>
+            console.log(res)
+        )
+        .catch(err=>console.log(err))
+    }
+
     if(!product){
         return <p>Loading...</p>
     }
@@ -27,11 +44,6 @@ export const SingleProduct =()=>{
         var discount = Math.floor(product.price * percent/100)
         var mainPrice = product.price + discount
     }
-   
-    const handleAdd = async ()=>{
-        const {data} = await apiurl.post('/cart')
-    }
-    
 return (
 <div>
     <Header />
@@ -47,18 +59,6 @@ return (
             <div style={{marginBottom:"5px"}}>Save ₹ {discount} <span id="spandiscount"> MRP ₹ {mainPrice}</span><span>(Inc of all taxes)</span></div>
             <div style={{marginBottom:"5px"}}>EMI Starting ₹ 1,202 view options</div>
             <img style={{width:"600px"}} width={300} src="https://ii2.pepperfry.com/media/wysiwyg/banners/Promo_Web_VIPCoupon_2X_17012022_es.jpg" alt="img" />
-            
-            {/* <div style={{display:"flex",marginTop:"20px"}}>
-
-                <div style={{fontWeight:"bold"}}>DELIVERY</div>
-                    <div style={{marginLeft:"40px"}}>
-                        <div style={{fontSize:"12px",marginBottom:"12px"}}>Enter Pincode to get Delivery Date, Assembly Information and other details</div>
-                        <div style={{marginTop:"15px"}} > 
-                        <TextField style={{height:"6px",width:"180px"}} id="outlined-basic" label="Pin Code" variant="outlined" /><span style={{fontWeight:"bolder",fontSize:"30px",margin:"10px"}}><Button style={{ fontWeight:"bolder"}} variant="text">APPLY</Button></span>
-                    </div>
-                </div>
-
-            </div> */}
 
             <div style={{display:"flex",marginTop:"40px",marginBottom:"20px"}}>
             <FormControl style={{width:"100px"}}>
@@ -82,7 +82,7 @@ return (
 
             </FormControl>
                 
-                    <Button onClick={()=>handleAdd()} style={{width:"200px",margin:"0 20px",color:"black"}} variant="outlined">ADD TO CART</Button>
+                    <Button onClick={()=>handleAddCart()} style={{width:"200px",margin:"0 20px",color:"black"}} variant="outlined">ADD TO CART</Button>
                
                     <Button style={{width:"200px",margin:"0 20px",backgroundColor:"#ff7035",color:"white"}} variant="contained">BUY NOW</Button>
                

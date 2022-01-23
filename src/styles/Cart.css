@@ -1,29 +1,29 @@
-#cartpage {
+.cart #cartpage {
   margin: 10px 50px;
 }
-#cart {
+.cart #cart {
   width: 800px;
 }
-#summary {
+.cart #summary {
   width: 380px;
   margin-left: 20px;
 }
 
-#maindiv {
+.cart #maindiv {
   display: flex;
   margin-top: 10px;
 }
 
-.border {
+.cart .border {
   border: 1px solid #e7e7e7;
   margin: 10px;
 }
 
-#login {
+.cart #login {
   margin: 3px 0px;
   font-weight: normal;
 }
-#logindown {
+.cart #logindown {
   color: grey;
   font-size: 14px;
   font-weight: lighter;
@@ -33,9 +33,13 @@
   font-size: 20px;
 }
 
-#retaildiscount {
+.cart #retaildiscount {
   color: #588209;
   font-size: 0.8rem;
+}
+.cart #deletebtn{
+  height: 40px;
+  width: 40px;
 }
 
 #cartvalue {
@@ -48,34 +52,37 @@
   font-size: 0.8rem;
 }
 
-#cartprice {
+.cart #cartprice {
   margin-left: 220px;
   font-size: 0.8rem;
 }
 
-#inclusive {
+.cart #inclusive {
   font-size: 13px;
   margin-left: 0px;
   text-align: end;
 }
 
-#placeorderbutton {
+.cart #placeorderbutton {
   background-color: coral;
   width: 100%;
   height: 40px;
 }
-#label {
+.cart #label {
   font-size: 15px;
   color: grey;
   margin-top: 10px;
 }
 
-#checkbox {
+.cart #checkbox {
   width: 20px;
   height: 20px;
 }
-.checkboxdiv {
+.cart .checkboxdiv {
   margin: 6px;
+}
+.cart #linkBtn{
+  text-decoration: none;
 }
 
 #pincode {
@@ -91,48 +98,49 @@
   padding: 10px;
 }
 
-#spanbutton2 {
+.cart #spanbutton2 {
   color: wheat;
   background-color: black;
   border: 1px solid black;
 }
 
-#productscart {
-  width: 100%;
-  height: 150px;
-  border: 1px solid #e7e7e7;
+.cart #productscart {
+  border: 1px solid #d1d1d1;
   display: flex;
 }
 
-#productscart :nth-child(1) {
+.cart #productscart :nth-child(1) {
   padding: 10px;
 }
+.cart #productscart img{
+  width: 150px;
+}
 
-#innerdata {
+.cart  #innerdata {
   width: 350px;
 }
 
-#innerdata :nth-child(1) {
-  font-size: 14px;
+.cart #innerdata :nth-child(1) {
+  font-size: 16px;
 }
 
-#innerdata :nth-child(2) {
+.cart #innerdata :nth-child(2) {
   font-size: 14px;
   color: coral;
   padding-left: 10px;
 }
 
-#innerdata :nth-child(3) {
+.cart #innerdata :nth-child(3) {
   font-size: 14px;
   color: grey;
   padding-left: 10px;
 }
 
-#innerdata :nth-child(4) {
+.cart #innerdata :nth-child(4) {
   font-size: 14px;
   padding-left: 10px;
 }
 
-#qtyform {
+.cart #qtyform {
   width: 100px;
 }
