@@ -7,11 +7,11 @@ Cloning of [Pepperfry](https://pepperfry.hramdas.in/)
 * Home Page
 ![Screenshot](src/Screenshot/home.jpeg)
 * Product
-![Screenshot](src/Sreenshot/single_product.jpeg)
-* Register
+![Screenshot](src/Screenshot/single_product.jpeg)
+<!-- * Register
 ![Screenshot](Screen-Shot/log-in.png)
 * Find a Store
-![Screenshot](Screen-Shot/findaStore.png)
+![Screenshot](Screen-Shot/findaStore.png) -->
 ## Pages Builds:
 * Home
 * Log in
